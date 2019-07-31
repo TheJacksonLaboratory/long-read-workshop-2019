@@ -11,7 +11,6 @@ A remote computer (instance) on Amazon Web Services has been set up for use in t
 
 Username    |  IP              |  Terminal                                                           |  Download Files
 ------------|------------------|---------------------------------------------------------------------|--------------------------------------------------------------------
-user        |  IP              |  <a href='http://IP:8080' target='_blank'>terminal</a>              |  <a href='http://IP' target='_blank'>download files</a>
 user1       |  3.89.37.100     |  <a href='http://3.89.37.100:8080' target='_blank'>terminal</a>     |  <a href='http://3.89.37.100' target='_blank'>download files</a>
 user2       |  18.206.190.222  |  <a href='http://18.206.190.222:8080' target='_blank'>terminal</a>  |  <a href='http://18.206.190.222' target='_blank'>download files</a>
 user3       |  54.237.244.151  |  <a href='http://54.237.244.151:8080' target='_blank'>terminal</a>  |  <a href='http://54.237.244.151' target='_blank'>download files</a>

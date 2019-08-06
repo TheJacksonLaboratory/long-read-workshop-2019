@@ -33,10 +33,5 @@ instructor  |  54.145.104.83  |  <a href='http://54.145.104.83:8080' target='_bl
 
 ****
 
-### Workshop Data Analysis
-
-*Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/jackson-pacbio-workshop.docx).*
-
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop/raw/gh-pages/users/pacbio/jackson-pacbio-workshop.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
 
 

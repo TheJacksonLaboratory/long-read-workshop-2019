@@ -14,7 +14,6 @@ A remote computer (instance) on Amazon Web Services has been set up for use in t
 
 Username    |  IP             |  Terminal                                                          |  RStudio                                                          |  Download Files
 ------------|-----------------|--------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------
-user        |  IP             |  <a href='http://IP:8080' target='_blank'>terminal</a>             |  <a href='http://IP:8787' target='_blank'>Rstudio</a>             |  <a href='http://IP' target='_blank'>download files</a>
 user1       |  3.82.11.8      |  <a href='http://3.82.11.8:8080' target='_blank'>terminal</a>      |  <a href='http://3.82.11.8:8787' target='_blank'>Rstudio</a>      |  <a href='http://3.82.11.8' target='_blank'>download files</a>
 user2       |  3.81.99.214    |  <a href='http://3.81.99.214:8080' target='_blank'>terminal</a>    |  <a href='http://3.81.99.214:8787' target='_blank'>Rstudio</a>    |  <a href='http://3.81.99.214' target='_blank'>download files</a>
 user3       |  3.91.85.92     |  <a href='http://3.91.85.92:8080' target='_blank'>terminal</a>     |  <a href='http://3.91.85.92:8787' target='_blank'>Rstudio</a>     |  <a href='http://3.91.85.92' target='_blank'>download files</a>

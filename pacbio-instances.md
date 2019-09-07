@@ -7,39 +7,21 @@ title: PacBio Sequencing Workshop
 
 A remote computer (instance) on Amazon Web Services has been set up for use in training for each user. All instances are identical with the same working environment. You should be able to connect from PC, Mac or Linux. Please see below for the instructions.
 
+    <script src="assets/lib/prism/prism.js"></script>
+    <script src="assets/lib/angular/angular.min.js"></script>
+    <script src="assets/lib/bootstrap/ui-bootstrap-custom-tpls-0.4.0-SNAPSHOT.js"></script>
+    <script src="assets/lib/smart-table/Smart-Table.debug.js"></script>
+    <script src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/mainStyle.css"/>
+<section id="section-filter" ng-controller="filterCtrl">
+    <h2>Search/filter data</h2>
 
-				<tab heading="javascript">
-<pre><code class="language-javascript">app.controller('basicsCtrl', ['$scope', function (scope) {
-    scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
-    ];
-}]);
-</code></pre>
-				</tab>
-			</tabset>
-			<table st-table="rowCollection" class="table table-striped">
-				<thead>
-				<tr>
-					<th>first name</th>
-					<th>last name</th>
-					<th>birth date</th>
-					<th>balance</th>
-					<th>email</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="row in rowCollection">
-					<td>{{row.firstName}}</td>
-					<td>{{row.lastName}}</td>
-					<td>{{row.birthDate}}</td>
-					<td>{{row.balance}}</td>
-					<td>{{row.email}}</td>
-				</tr>
-				</tbody>
-			</table>
-			
+
+    <div class="table-container">
+        <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+
+</section>
 
 
 ### User Instances

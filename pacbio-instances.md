@@ -7,35 +7,29 @@ title: PacBio Sequencing Workshop
 
 A remote computer (instance) on Amazon Web Services has been set up for use in training for each user. All instances are identical with the same working environment. You should be able to connect from PC, Mac or Linux. Please see below for the instructions.
 
-```html
-<html ng-app="app">
-<head>
-    <title>Smart Table documentation</title>
-    <script src="assets/lib/prism/prism.js"></script>
-    <script src="assets/lib/angular/angular.min.js"></script>
-    <script src="assets/lib/bootstrap/ui-bootstrap-custom-tpls-0.4.0-SNAPSHOT.js"></script>
-    <script src="assets/lib/smart-table/Smart-Table.debug.js"></script>
-    <script src="assets/js/app.js"></script>
-    <link rel="stylesheet" href="assets/css/mainStyle.css"/>
-    <!--<link rel="stylesheet" href="assets/css/bootstrap.css"/>-->
-    <!--<link rel="stylesheet" href="assets/lib/prism/prism.css"/>-->
-</head>
-<body ng-controller="mainCtrl">
+
+
+<script src="assets/lib/prism/prism.js"></script>
+<script src="assets/lib/angular/angular.min.js"></script>
+<script src="assets/lib/bootstrap/ui-bootstrap-custom-tpls-0.4.0-SNAPSHOT.js"></script>
+<script src="assets/lib/smart-table/Smart-Table.debug.js"></script>
+<script src="assets/js/app.js"></script>
+<link rel="stylesheet" href="assets/css/mainStyle.css"/>
+
 <div class="main">
 
 <section id="section-filter" ng-controller="filterCtrl">
-    <h2>Search/filter data</h2>
+<h2>Search/filter data</h2>
 
 
-    <div class="table-container">
+<div class="table-container">
         <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection" </smart-table>
-    </div>
+</div>
 
 </section>
 </div>
-</body>
-</html>
-```
+
+
 
 ### User Instances
     

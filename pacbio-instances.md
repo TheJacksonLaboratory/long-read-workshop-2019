@@ -9,6 +9,11 @@ A remote computer (instance) on Amazon Web Services has been set up for use in t
 
 ### User Instances
 
+<figure class="video_container">
+<iframe src="http://docs.google.com/gview?url=https://github.com/TheJacksonLaboratory/long-read-workshop/blob/gh-pages/users/oxford/oxford-workshop.docx?raw=true&embedded=true"></iframe>
+</figure>
+
+
 Username    |  IP              |  Terminal                                                           |  Download Files
 ------------|------------------|---------------------------------------------------------------------|--------------------------------------------------------------------
 user1       |  3.89.37.100     |  <a href='http://3.89.37.100:8080' target='_blank'>terminal</a>     |  <a href='http://3.89.37.100' target='_blank'>download files</a>

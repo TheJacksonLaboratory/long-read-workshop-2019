@@ -1,912 +1,612 @@
 <!doctype html>
 <html ng-app="app">
 <head>
-	<title>Smart Table documentation</title>
-	<script src="./assets/lib/prism/prism.js"></script>
-	<script src="./assets/lib/angular.js"></script>
-	<script src="./assets/lib/ui-bootstrap.js"></script>
-	<script src="./assets/lib/ui-bootstrap-tpls.js"></script>
-	<script src="./assets/lib/smart-table.min.js"></script>
-	<script src="./assets/js/app.js"></script>
-	<link rel="stylesheet" href="./assets/css/mainStyle.css"/>
-	<link rel="stylesheet" href="./assets/lib/prism/prism.css"/>
-	<link rel="stylesheet" href="./assets/css/bootstrap.css"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Table documentation</title>
+    <script src="assets/lib/prism/prism.js"></script>
+    <script src="assets/lib/angular/angular.min.js"></script>
+    <script src="assets/lib/bootstrap/ui-bootstrap-custom-tpls-0.4.0-SNAPSHOT.js"></script>
+    <script src="assets/lib/smart-table/Smart-Table.debug.js"></script>
+    <script src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/mainStyle.css"/>
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="assets/lib/prism/prism.css"/>
 </head>
-<body class="container-fluid" ng-controller="mainCtrl">
-<header class="navbar navbar-default navbar-fixed-top">
-	<nav>
-		<ul class="nav navbar-nav" style="width: 100%;">
-			<a href="#top" role="button" class="navbar-brand">
-				Smart-Table
-			</a>
-
-			<li><a href="#section-intro">Introduction</a></li>
-			<li><a href="#section-basics">The basics</a></li>
-			<li><a href="#section-format">Format/Template</a></li>
-            <li uib-dropdown class="dropdown">
-                <a role="button" uib-dropdown-toggle class="dropdown-toggle">
-                    Filter data <b class="caret"></b>
-                </a>
-                <ul uib-dropdown-menu class="dropdown-menu">
-                    <li><a href="#section-filter">Search plugin</a></li>
-                    <li><a href="#filter-strict-mode">Strict mode</a></li>
-                    <li><a href="#filter-custom-plugin">Custom search plugins</a></li>
-                </ul>
-            </li>
-			<li uib-dropdown class="dropdown">
-				<a role="button" uib-dropdown-toggle class="dropdown-toggle">
-					Plugins <b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu" uib-dropdown-menu>
-					<li><a href="#section-sort">Sort data</a></li>
-					<li><a href="#section-selection">Select row(s)</a></li>
-					<li><a href="#section-pagination">Pagination</a></li>
-					<li><a href="#section-pipe">Pipe/Ajax</a></li>
-					<li><a href="#section-custom">Custom</a></li>
-				</ul>
-			</li>
-			<li><a href="#examples-section">examples</a></li>
-
-		</ul>
-	</nav>
+<body ng-controller="mainCtrl">
+<header>
+    <h1 class="banner">Smart Table</h1>
+    <a class="git btn" href="https://github.com/lorenzofox3/Smart-Table"><i class="icon-white icon-download-alt"></i>Code on github</a>
+    <nav class="menu" scroll-treshold="100"><ul>
+        <li><a href="#section-intro">Introduction</a></li>
+        <li><a href="#section-basics">The basics</a></li>
+        <li><a href="#section-format">Format data</a></li>
+        <li><a href="#section-sort">Sort data</a></li>
+        <li><a href="#section-filter">Filter data</a></li>
+        <li><a href="#section-selection">Select row(s)</a></li>
+        <li><a href="#section-edit">Edit cell(s)</a></li>
+        <li><a href="#section-style">Simple style</a></li>
+        <li><a href="#section-cellTemplate">Cell template</a></li>
+        <li><a href="#section-pagination">Pagination</a></li>
+        <li><a href="#section-config">Summary</a></li>
+    </ul></nav>
 </header>
-<div class="header">
-	<h1 class="banner">Smart Table</h1>
-	</p>
-</div>
-<div class="text-center"><a href="https://github.com/lorenzofox3/Smart-Table" class="btn btn-default btn-lg"><i
-	class="glyphicon glyphicon-download"></i> Get the code</a></div>
 <div class="main">
 <section id="section-intro" ng-controller="paginationCtrl">
+    <h2>Introduction</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/Introduction"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
 
-  <p style="margin-top:1em;font-size: 1.75em;" class="text-center padding bg-danger">
-    The next version of this project will be created as a binding for the more ambitious <a
-    href="https://smart-table.github.io/www/dist/">new project</a>. Share the word or come and help over and let's
-    create the best grid ecosystem ever!
-  </p>
-
-  <p class="text-center bg-warning padding">
-    If you are looking for Smart Table for Angular (version two and above) please check <a
-    href="https://itnext.io/smart-table-for-angular-part-1-515ef6cb2d0a">This article</a>
-  </p>
-
-  <h2 class=".h2">Introduction</h2>
-
-  <p class=".text-justify"><strong>Smart table</strong> is an <a href="#">Angularjs</a> module to easily display data in
-    a table with a set of built in features such filtering, sorting, etc. in a <strong>declarative way</strong>.
-    While developing this module I made sure to focus on these particular points:</p>
-  <div style="margin:1em 0;" class="bg-success padding">
+    <p><strong>Smart table</strong> is an <a href="#">Angularjs</a> module to easily display data in a table with a set
+        of built in functionalities such filetering,
+        sorting, etc. While developing this module I made sure to focus on this particular points:</p>
     <ul>
-      <li><strong>lightweight</strong>: smart-table is less than 4kb minified and has <strong>no
-        dependencies</strong> other than Angular itself. And you can even reduce its size with a <a href="#">custom
-        build</a> if you are not interested in some of the plugins.
-      </li>
-      <li><strong>robust</strong>: smart-table is widely tested which makes the module really stable</li>
-      <li><strong>modular</strong> and <strong>extensible</strong>: The core features can be accessed with the
-        controller
-        API which is created by the top level directive. Then
-        a set of directives (plugins) allow you to compose your table behavior in a declarative way.
-      </li>
-      <li><strong>developer friendly</strong>: the design of the module has been thought carefully and it is really
-        easy to get into the source code to modify/customise the module to best fit your needs.
+        <li><strong>lightweight</strong>: smart-table is less than 13kb minified and has <strong>no
+            dependencies</strong> other than Angular itself
+        </li>
+        <li><strong>robust</strong>: smart-table is widely tested which makes the module really stable</li>
+        <li><strong>useful</strong>: smart-table will allow you to have a table on which you will be able to perform
+            common operations with <strong>simple</strong> configuration
+        </li>
+        <li><strong>developer friendly</strong>: the design of the module has been thought carefully and it is really
+            easy to get into the source code to modify/customise the module to best fit your needs.
+            You will find for example:
+            <ul>
+                <li>on the <a href="https://github.com/lorenzofox3/Smart-Table/tree/server-sample">different branches</a> of the project some custom implementation to turn
+                    smart-table into a server driven table while changing less than 10 lines
+                </li>
+
+                <li>on <a href="http://plnkr.co/edit/xsJs8m?p=preview">plunker</a>(here made by Jiri Kavulak) some custom implementation with richer
+                    functionalities
+                </li>
+            </ul>
     </ul>
-  </div>
+    <p>Although smart-table is from far the best table module for angular :D, there are other table modules in the
+        angular ecosystem you might be interested in. The approach and philosophy are different and maybe more appropriate to your way of building web application. Among the most popular:</p>
+    <ul>
+        <li><a href="http://angular-ui.github.io/ng-grid/">ng-grid</a></li>
+        <li><a href="http://esvit.github.io/ng-table/#!/">ng-table</a></li>
+    </ul>
 
-  <div class="text-center">
-    <p>An example of server side driven smart-table used for <a href="http://reactcrm.com/">React CRM</a></p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/UO84M__kqDA?rel=0" frameborder="0"
-            allowfullscreen></iframe>
-  </div>
-
-  <p>Although smart-table is by far the best table module for angular :D, there are other table modules in the
-    angular ecosystem you might be interested in. The approach and philosophy are different and maybe more appropriate
-    to your way of building web application. Among the most popular:</p>
-  <ul>
-    <li><a href="http://ui-grid.info/">UI Grid</a></li>
-    <li><a href="http://esvit.github.io/ng-table/#!/">ng-table</a></li>
-  </ul>
-
-  <p>If you want to play around, try this <a href="http://plnkr.co/edit/OGq29V?p=preview">plunker</a></p>
-
-  <p class="text-justify">
-    clone the repository or install with bower:
-  <pre style="display: inline-block"><code>bower install angular-smart-table</code></pre>
-  </p>
-  <p class="text-justify">
-    Or use npm:
-  <pre style="display: inline-block"><code>npm install angular-smart-table</code></pre>
-  </p>
-
-  <div class="text-center">
-    <a class="btn btn-primary"
-       href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/Introduction"><i
-      class="glyphicon glyphicon-pencil"></i> Improve the documentation</a>
-  </div>
+    <p>If you want to play around, try this <a href="http://plnkr.co/edit/8Qectt?p=preview">plunker</a></p>
 </section>
-
-<section class="clearfix container-fluid" id="section-basics" ng-controller="basicsCtrl">
-	<h2 class="h2">The basics</h2>
-	<div class="row">
-		<p class="text-justify">
-			The first thing is to add the module <code>angular.module('myApp',['smart-table']</code> to your angular
-			application.
-			Then use the markup you would normally do
-			for html tables. On the table element add the <code>st-table</code> attribute to tell smart-table which collection
-			holds your <strong>displayed data</strong>, (i.e., the one you are going to use in the repeater). Now you will be able to compose the table using the plugins.
-		</p>
-	</div>
-			<tabset>
-				<tab heading="Markup">
-<pre ng-non-bindable><code class="language-markup">&lt;table st-table="rowCollection" class="table table-striped">
-	&lt;thead>
-	&lt;tr>
-		&lt;th>first name&lt;/th>
-		&lt;th>last name&lt;/th>
-		&lt;th>birth date&lt;/th>
-		&lt;th>balance&lt;/th>
-		&lt;th>email&lt;/th>
-	&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-	&lt;tr ng-repeat="row in rowCollection">
-		&lt;td>{{row.firstName}}&lt;/td>
-		&lt;td>{{row.lastName}}&lt;/td>
-		&lt;td>{{row.birthDate}}&lt;/td>
-		&lt;td>{{row.balance}}&lt;/td>
-		&lt;td>{{row.email}}&lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-&lt;/table></code></pre>
-				</tab>
-				<tab heading="javascript">
-<pre><code class="language-javascript">app.controller('basicsCtrl', ['$scope', function (scope) {
-    scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
-    ];
-}]);
-</code></pre>
-				</tab>
-			</tabset>
-			<table st-table="rowCollection" class="table table-striped">
-				<thead>
-				<tr>
-					<th>first name</th>
-					<th>last name</th>
-					<th>birth date</th>
-					<th>balance</th>
-					<th>email</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr ng-repeat="row in rowCollection">
-					<td>{{row.firstName}}</td>
-					<td>{{row.lastName}}</td>
-					<td>{{row.birthDate}}</td>
-					<td>{{row.balance}}</td>
-					<td>{{row.email}}</td>
-				</tr>
-				</tbody>
-			</table>
-
-	<p class="text-justify">
-		Of course in this short example, smart-table does not bring much as we don't use any of the plugins but we are now ready to compose our table.
-	</p>
-
-	<p class="text-justify bg-danger padding">smart-table first creates a safe copy of your displayed collection: it creates another array by copying the <strong>references</strong> of the items. It will then modify the displayed collection (when sorting, filtering, etc.) based on its safe copy. So if you don't intend to modify the collection outside of the table, it will be all fine.
-		However, if you want to modify the collection (add item, remove item), or <strong>if you load your data asynchronously (via AJAX-Call, timeout, etc.)</strong> you will have to tell smart-table to watch the original collection so it can update its safe copy. This is where you use the <strong>stSafeSrc attribute</strong>.
-	</p>
-
-	<h3 class="h3">stSafeSrc attribute</h3>
-	
-	<p class="text-justify bg-danger padding">If you are bringing in data asynchronously (from a remote database, restful endpoint, ajax call, etc.) you must use the stSafeSrc attribute. You must use a separate collection for both the base and safe collections or you may end up with an infinite loop.</p>
-
-	<p class="text-justify">Use it to tell smart-table which collection to watch if you intend to modify its content. Don't pay attention to the sort and filter directives for the moment but use the table and note how the data is correctly synced.</p>
-
-	<tabset>
-		<tab heading="Markup">
-<pre ng-non-bindable><code class="language-markup">	&lt;div ng-controller="safeCtrl">
-
-		&lt;button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
-			&lt;i class="glyphicon glyphicon-plus">
-			&lt;/i> Add random item
-		&lt;/button>
-
-		&lt;table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
-			&lt;thead>
-			&lt;tr>
-				&lt;th st-sort="firstName">first name&lt;/th>
-				&lt;th st-sort="lastName">last name&lt;/th>
-				&lt;th st-sort="birthDate">birth date&lt;/th>
-				&lt;th st-sort="balance">balance&lt;/th>
-			&lt;/tr>
-			&lt;tr>
-				&lt;th colspan="5">&lt;input st-search="" class="form-control" placeholder="global search ..." type="text"/>&lt;/th>
-			&lt;/tr>
-			&lt;/thead>
-			&lt;tbody>
-			&lt;tr ng-repeat="row in displayedCollection">
-				&lt;td>{{row.firstName}}&lt;/td>
-				&lt;td>{{row.lastName}}&lt;/td>
-				&lt;td>{{row.birthDate}}&lt;/td>
-				&lt;td>{{row.balance}}&lt;/td>
-				&lt;td>
-				&lt;button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
-					&lt;i class="glyphicon glyphicon-remove-circle">
-					&lt;/i>
-				&lt;/button>
-				&lt;/td>
-			&lt;/tr>
-			&lt;/tbody>
-		&lt;/table>
-
-	&lt;/div></code></pre>
-		</tab>
-		<tab heading="javascript">
-<pre><code class="language-javascript">app.controller('safeCtrl', ['$scope', function ($scope) {
-
-    var firstnames = ['Laurent', 'Blandine', 'Olivier', 'Max'];
-    var lastnames = ['Renard', 'Faivre', 'Frere', 'Eponge'];
-    var dates = ['1987-05-21', '1987-04-25', '1955-08-27', '1966-06-06'];
-    var id = 1;
-
-    function generateRandomItem(id) {
-
-        var firstname = firstnames[Math.floor(Math.random() * 3)];
-        var lastname = lastnames[Math.floor(Math.random() * 3)];
-        var birthdate = dates[Math.floor(Math.random() * 3)];
-        var balance = Math.floor(Math.random() * 2000);
-
-        return {
-            id: id,
-            firstName: firstname,
-            lastName: lastname,
-            birthDate: new Date(birthdate),
-            balance: balance
-        }
-    }
-
-    $scope.rowCollection = [];
-
-    for (id; id < 5; id++) {
-        $scope.rowCollection.push(generateRandomItem(id));
-    }
-
-    //add to the real data holder
-    $scope.addRandomItem = function addRandomItem() {
-        $scope.rowCollection.push(generateRandomItem(id));
-        id++;
-    };
-
-    //remove to the real data holder
-    $scope.removeItem = function removeItem(row) {
-        var index = $scope.rowCollection.indexOf(row);
-        if (index !== -1) {
-            $scope.rowCollection.splice(index, 1);
-        }
-    }
-}]);</code></pre>
-		</tab>
-	</tabset>
-	
-	<div ng-controller="safeCtrl">
-
-		<button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
-			<i class="glyphicon glyphicon-plus">
-			</i> Add random item
-		</button>
-
-		<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
-			<thead>
-			<tr>
-				<th st-sort="firstName">first name</th>
-				<th st-sort="lastName">last name</th>
-				<th st-sort="birthDate">birth date</th>
-				<th st-sort="balance">balance</th>
-			</tr>
-			<tr>
-				<th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="row in displayedCollection">
-				<td>{{row.firstName}}</td>
-				<td>{{row.lastName}}</td>
-				<td>{{row.birthDate}}</td>
-				<td>{{row.balance}}</td>
-				<td>
-				<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
-					<i class="glyphicon glyphicon-remove-circle">
-					</i>
-				</button>
-				</td>
-			</tr>
-			</tbody>
-		</table>
-
-	</div>
-	<div class="text-center"><a class="btn btn-primary"
-		 href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/basics"><i
-		class="glyphicon glyphicon-pencil"></i>improve the documentation</a></div>
-</section>
-
-<section class="clearfix" id="section-format" ng-controller="formatCtrl">
-	<h2 class="h2">Format data & cell templating</h2>
-
-	<p class="text-justify">
-		Well, the point is that you keep full control on the markup, so formatting and templating gets as easy as using
-		standard markup and angular framework features, fancy directives, etc.
-	</p>
-
-	<tabset>
-		<tab heading="markup">
-			<pre ng-non-bindable><code class="language-markup">&lt;table st-table="rowCollection" class="table table-striped">
-	&lt;thead>
-	&lt;tr>
-		&lt;th>first name&lt;/th>
-		&lt;th>last name&lt;/th>
-		&lt;th>birth date&lt;/th>
-		&lt;th>balance&lt;/th>
-		&lt;th>email&lt;/th>
-	&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-	&lt;tr ng-repeat="row in rowCollection">
-		&lt;td>{{row.firstName | uppercase}}&lt;/td>
-		&lt;td>{{row.lastName}}&lt;/td>
-		&lt;td>{{row.birthDate | date}}&lt;/td>
-		&lt;td>{{row.balance | currency}}&lt;/td>
-		&lt;td>
-			&lt;button class="btn btn-sm" popover-placement="top" popover="{{row.email}}" type="button">
-				&lt;i class="glyphicon glyphicon-eye-open">&lt;/i>
-			&lt;/button>
-			&lt;a ng-href="mailto:{{row.email}}">email&lt;/a>&lt;/td>
-		&lt;td>
-			&lt;button type="button" ng-click="removeRow(row)" class="btn btn-sm btn-danger">
-				&lt;i class="glyphicon glyphicon-remove-circle">
-				&lt;/i>
-			&lt;/button>
-		&lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-&lt;/table></code></pre>
-		</tab>
-		<tab heading="JavaScript">
-<pre><code class="language-javascript">app.controller('formatCtrl', ['$scope', function (scope) {
-    scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
-    ];
-
-    scope.removeRow = function removeRow(row) {
-        var index = scope.rowCollection.indexOf(row);
-        if (index !== -1) {
-            scope.rowCollection.splice(index, 1);
-        }
-    }
-}]);</code></pre>
-		</tab>
-	</tabset>
-	<div>
-		<table st-table="rowCollection" class="table table-striped">
-			<thead>
-			<tr>
-				<th>first name</th>
-				<th>last name</th>
-				<th>birth date</th>
-				<th>balance</th>
-				<th>email</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="row in rowCollection">
-				<td>{{row.firstName | uppercase}}</td>
-				<td>{{row.lastName}}</td>
-				<td>{{row.birthDate | date}}</td>
-				<td>{{row.balance | currency}}</td>
-				<td>
-					<button class="btn btn-sm" popover-placement="top" popover="{{row.email}}" type="button">
-						<i class="glyphicon glyphicon-eye-open"></i>
-					</button>
-					<a ng-href="mailto:{{row.email}}">email</a></td>
-				<td>
-					<button type="button" ng-click="removeRow(row)" class="btn btn-sm btn-danger">
-						<i class="glyphicon glyphicon-remove-circle">
-						</i>
-					</button>
-				</td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="text-center">
-		<a class="btn btn-primary"
-			 href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/format"><i
-			class="glyphicon-pencil glyphicon"></i>improve the documentation</a>
-	</div>
-</section>
-<section class="clearfix" id="section-sort" ng-controller="sortCtrl">
-	<h2 class="h2">Sort data</h2>
-	<p class="text-justify">
-		We can use the <code>st-sort</code> directive to have a built in sort feature. Again, it is all declarative. You add the attribute <code>st-sort</code> to your table headers.
-		this will specify the property name you want to sort by or the name of a getter function available on the scope. There are three different sort states: ascending, descending and back to the primary order.
-	</p>
-	<tabset>
-				<tab heading="markup">
-<pre ng-non-bindable><code class="language-markup">&lt;table st-table="rowCollection" class="table table-striped">
-	&lt;thead>
-	&lt;tr>
-		&lt;th st-sort="getters.firstName">first name&lt;/th>
-		&lt;th st-sort="lastName">last name&lt;/th>
-		&lt;th st-sort="birthDate">birth date&lt;/th>
-		&lt;th st-sort="balance" st-skip-natural="true" >balance&lt;/th>
-		&lt;th>email&lt;/th>
-	&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-	&lt;tr ng-repeat="row in rowCollection">
-		&lt;td>{{row.firstName | uppercase}}&lt;/td>
-		&lt;td>{{row.lastName}}&lt;/td>
-		&lt;td>{{row.birthDate | date}}&lt;/td>
-		&lt;td>{{row.balance | currency}}&lt;/td>
-		&lt;td>&lt;a ng-href="mailto:{{row.email}}">email&lt;/a>&lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-&lt;/table></code></pre>
-		</tab>
-		<tab heading="JavaScript">
-<pre><code class="language-javascript">app.controller('sortCtrl', ['$scope', '$filter', function (scope, filter) {
-    scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
-    ];
-
-    scope.getters={
-        firstName: function (value) {
-            //this will sort by the length of the first name string
-            return value.firstName.length;
-        }
-    }
-}]);</code></pre>
-		</tab>
-	</tabset>
-	<div class="table-container">
-		<table st-table="rowCollection" class="table table-striped">
-			<thead>
-			<tr>
-				<th st-sort="getters.firstName">first name</th>
-				<th st-sort="lastName">last name</th>
-				<th st-sort="birthDate">birth date</th>
-				<th st-sort="balance" st-skip-natural="true">balance</th>
-				<th>email</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="row in rowCollection">
-				<td>{{row.firstName | uppercase}}</td>
-				<td>{{row.lastName}}</td>
-				<td>{{row.birthDate | date}}</td>
-				<td>{{row.balance | currency}}</td>
-				<td><a ng-href="mailto:{{row.email}}">email</a></td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<p class="bg-info padding text-justify">
-		Note you can ask to sort a column by default by adding the attribute <code>st-sort-default="true"</code>. And if you set the value of this attribute to <code>"reverse"</code> then it will sort this column and reverse the order by default.
-	</p>
-
-	<p class="bg-info padding text-justify">
-		You can skip the "natural order" state by adding <code>st-skip-natural="true"</code> as attribute of your th element.
-	</p>
-
-	<p class="padding text-justify">
-		smart-table add css classes when the sort state changes <code>st-sort-ascent</code> and <code>st-sort-descent</code>. If you use a third party css framework with specific class names you can overwrite the default ones by passing the attributes
-		<code>st-class-ascent="myClassName"</code> and <code>st-class-descent="className"</code>.
-		The css used for this website is
-		<pre><code class="language-css">
-  .st-sort-ascent:before {
-    content: '\25B2';
-  }
-
-  .st-sort-descent:before {
-    content: '\25BC';
-  }
-</code></pre>
-	</p>
-
-	<div class="text-center"><a class="btn btn-primary" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/sort"><i
-		class="glyphicon glyphicon-pencil"></i>improve the documentation</a></div>
-</section>
-
-<section id="section-filter" class="clearfix" ng-controller="filterCtrl">
-    <h2 class="h2">Search/filter data</h2>
+<section id="section-basics" ng-controller="basicsCtrl">
+    <h2>The basics</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/basics"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
     <p>
-			The <code>stSearch</code> gives you a way to filter rows globally if you don't set any value to the attribute. Or you can also define the predicate to use as value of the directive attribute.
-			Use a property name, or alternatively you can interpolate the predicate with a scope property
+        If you want to display data in a table it is really easy. You simply have to add the <em>smart-table</em> tag
+        into your markup (it is an element directive) and bind the <em>rows</em> (see markup tab) attribute
+        to an array somewhere in the scope. In our example we specify the data used to fill the table in a
+        controller.
     </p>
-    <tabset><tab heading="markup">
-<pre ng-non-bindable><code class="language-markup">&lt;form>
-	&lt;label for="predicate">selected predicate:&lt;/label>
-	&lt;select class="form-control" id="predicate" ng-model="selectedPredicate" ng-options="predicate for predicate in predicates">&lt;/select>
-&lt;/form>
-&lt;table st-table="rowCollection" class="table table-striped">
-	&lt;thead>
-	&lt;tr>
-		&lt;th st-sort="firstName">first name&lt;/th>
-		&lt;th st-sort="lastName">last name&lt;/th>
-		&lt;th st-sort="birthDate">birth date&lt;/th>
-		&lt;th st-sort="balance">balance&lt;/th>
-		&lt;th>email&lt;/th>
-	&lt;/tr>
-	&lt;tr>
-		&lt;th>
-			&lt;input st-search="firstName" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-		&lt;/th>
-		&lt;th colspan="3">
-			&lt;input st-search placeholder="global search" class="input-sm form-control" type="search"/>
-		&lt;/th>
-		&lt;th>
-			&lt;input st-search="{{selectedPredicate}}" placeholder="bound predicate" class="input-sm form-control" type="search"/>
-		&lt;/th>
-	&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-	&lt;tr ng-repeat="row in rowCollection">
-		&lt;td>{{row.firstName | uppercase}}&lt;/td>
-		&lt;td>{{row.lastName}}&lt;/td>
-		&lt;td>{{row.birthDate | date}}&lt;/td>
-		&lt;td>{{row.balance | currency}}&lt;/td>
-		&lt;td>&lt;a ng-href="mailto:{{row.email}}">email&lt;/a>&lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-&lt;/table></code></pre>
-        </tab>
-			 <tab heading="JavaScript">
-<pre><code class="language-javascript">app.controller('filterCtrl', ['$scope', '$filter', function (scope, filter) {
+    <ul class="note">
+        <li><i class="icon-white icon-tags"></i>Without anything else, the table will use all the keys (which don't start with '$' to avoid collision
+            with angular related properties) as headers for the table
+        </li>
+        <li><i class="icon-white icon-tags"></i>It will also take default configuration values : here for instance you can sort by column as the
+            columns are sortable by default
+        </li>
+    </ul>
+    <div class="tab-container">
+        <tabs>
+            <pane heading="JavaScript">
+                 <pre><code class="language-javascript">app.controller('basicsCtrl', ['$scope', function (scope) {
     scope.rowCollection = [
         {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
         {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
         {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
     ];
-
-    scope.predicates = ['firstName', 'lastName', 'birthDate', 'balance', 'email'];
-    scope.selectedPredicate = scope.predicates[0];
 }]);</code></pre>
-        </tab>
-    </tabset>
-	<div class="table-container">
-		<form>
-			<label for="predicate">selected predicate:</label>
-			<select class="form-control" id="predicate" ng-model="selectedPredicate" ng-options="predicate for predicate in predicates"></select>
-		</form>
-		<table st-table="rowCollection" class="table table-striped">
-			<thead>
-			<tr>
-				<th st-sort="firstName">first name</th>
-				<th st-sort="lastName">last name</th>
-				<th st-sort="birthDate">birth date</th>
-				<th st-sort="balance">balance</th>
-				<th>email</th>
-			</tr>
-			<tr>
-				<th>
-					<input st-search="firstName" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-				</th>
-				<th colspan="3">
-					<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
-				</th>
-				<th>
-					<input st-search="{{selectedPredicate}}" placeholder="bound predicate" class="input-sm form-control" type="search"/>
-				</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="row in rowCollection">
-				<td>{{row.firstName | uppercase}}</td>
-				<td>{{row.lastName}}</td>
-				<td>{{row.birthDate | date}}</td>
-				<td>{{row.balance | currency}}</td>
-				<td><a ng-href="mailto:{{row.email}}">email</a></td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<p class="bg-info padding text-justify">
-		Note there is a throttle of 400 ms by default which you can overwrite with the attribute <code>st-delay</code>
-	</p>
-
-	<p class="bg-info padding text-justify">
-		By default the search will be triggered on the <code>input</code> event but you can change it using the attribute <code>st-input-event</code>
-		<pre ng-non-bindable><code class="language-markup">&lt;select st-input-event="change" st-search="myProp">&lt;/select></code></pre>
-	</p>
-
-	<div class="text-center">
-		<a class="btn btn-primary" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/filter"><i class="glyphicon glyphicon-pencil"></i> improve the documentation</a>
-	</div>
-
-    <h3 id="filter-strict-mode">Strict mode filtering</h3>
-
-    <p>
-        The <code>stSetFilter</code> replaces the filter used when searching through Smart Table.
-        When the default behavior for <code>stSearch</code> does not meet your demands, like in a select where one entry is a substring of another, use a custom filter to achieve your goals.
-    </p>
-
-    <tabset><tab heading="markup">
-<pre ng-non-bindable><code class="language-markup">&lt;table st-safe-src="rowCollection" st-table="displayCollection" st-set-filter="myStrictFilter" class="table table-striped">
-    &lt;thead>
-        &lt;tr>
-            &lt;th st-sort="firstName">first name&lt;/th>
-            &lt;th st-sort="lastName">last name&lt;/th>
-            &lt;th st-sort="strictSearchValue">strict search&lt;/th>
-            &lt;th st-sort="strictSelectValue">strict select&lt;/th>
-        &lt;/tr>
-        &lt;tr>
-            &lt;th>
-                &lt;input st-search="firstName" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-            &lt;/th>
-            &lt;th>
-                &lt;input st-search="lastName" placeholder="search for lastname" class="input-sm form-control" type="search"/>
-            &lt;/th>
-            &lt;th>
-                &lt;input st-search="strictSearchValue" placeholder="search for equal match" class="input-sm form-control" type="search"/>
-            &lt;/th>
-            &lt;th>
-                &lt;select st-search="strictSelectValue">
-                    &lt;option value="">All&lt;/option>
-                    &lt;option ng-repeat="row in rowCollection | unique:'strictSelectValue'" value="{{row.strictSelectValue}}">{{row.strictSelectValue}}&lt;/option>
-                &lt;/select>
-            &lt;/th>
-        &lt;/tr>
-    &lt;/thead>
-    &lt;tbody>
-        &lt;tr ng-repeat="row in displayCollection">
-            &lt;td>{{row.firstName | uppercase}}&lt;/td>
-            &lt;td>{{row.lastName}}&lt;/td>
-            &lt;td>{{row.strictSearchValue}}&lt;/td>
-            &lt;td>{{row.strictSelectValue}}&lt;/td>
-        &lt;/tr>
-    &lt;/tbody>
-&lt;/table></code></pre>
-    </tab>
-        <tab heading="JavaScript">
-<pre><code class="language-javascript">app.controller('filterCtrl', ['$scope', '$filter', function (scope, filter) {
-    scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com', strictSearchValue: "abc", strictSelectValue: "ab"},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com', strictSearchValue: "ab", strictSelectValue: "abc"},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com', strictSearchValue: "abc", strictSelectValue: "abc"}
-    ];
-
-    scope.displayCollection = [].concat(scope.rowCollection);
-
-    scope.predicates = ['firstName', 'lastName', 'birthDate', 'balance', 'email'];
-    scope.selectedPredicate = scope.predicates[0];
-]);
-
-app.filter('myStrictFilter', function($filter){
-    return function(input, predicate){
-        return $filter('filter')(input, predicate, true);
-    }
-});
-
-app.filter('unique', function() {
-    return function (arr, field) {
-        var o = {}, i, l = arr.length, r = [];
-        for(i=0; i&lt;l;i+=1) {
-            o[arr[i][field]] = arr[i];
-        }
-        for(i in o) {
-            r.push(o[i]);
-        }
-        return r;
-    };
-  })</code></pre>
-        </tab>
-    </tabset>
-
+            </pane>
+            <pane active heading="Markup">
+<pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="basicsCtrl">
+    &lt;smart-table rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+            </pane>
+        </tabs>
+    </div>
     <div class="table-container">
-        <table st-safe-src="rowCollection" st-table="displayCollection" st-set-filter="myStrictFilter" class="table table-striped">
-            <thead>
-            <tr>
-                <th st-sort="firstName">first name</th>
-                <th st-sort="lastName">last name</th>
-                <th st-sort="strictSearchValue">strict search</th>
-                <th st-sort="strictSelectValue">strict select</th>
-            </tr>
-            <tr>
-                <th>
-                    <input st-search="firstName" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-                </th>
-                <th>
-                    <input st-search="lastName" placeholder="search for lastname" class="input-sm form-control" type="search"/>
-                </th>
-                <th>
-                    <input st-search="strictSearchValue" placeholder="search for equal match" class="input-sm form-control" type="search"/>
-                </th>
-                <th>
-                    <select st-search="strictSelectValue">
-                        <option value="">All</option>
-                        <option ng-repeat="row in rowCollection | unique:'strictSelectValue'" value="{{row.strictSelectValue}}">{{row.strictSelectValue}}</option>
-                    </select>
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="row in displayCollection">
-                <td>{{row.firstName | uppercase}}</td>
-                <td>{{row.lastName}}</td>
-                <td>{{row.strictSearchValue}}</td>
-                <td>{{row.strictSelectValue}}</td>
-            </tr>
-            </tbody>
-        </table>
+        <smart-table class="table table-striped" rows="rowCollection"></smart-table>
     </div>
-
-    <p class="bg-info padding text-justify">
-        Note that <code>st-safe-src</code> is required for the select to properly display all distinct elements in the collection.
-        Should this be omitted, the select would only contain values from elements visible in table, also affected by paging.
-    </p>
-
-    <h3 class="h3" id="filter-custom-plugin">Custom search plugins</h3>
-
     <p>
-        It is easy to write advanced plugins to smart table.
-        The following example shows how you can develop a dropdown to filter on a specific value or a multiple selection plugin which lets you filter in a excel-like style.
+        You can also specify the layout you want. That is where we introduce the column configuration. On our markup
+        we bind the <em>columns</em> attribute to an array in which we specify
+        how to display the data. The <em>label</em> property will give the header of the column whereas the <em>map</em> property
+        is the property in our data-model object we want a given column
+        to be bound to. A column will be inserted by column configuration.
     </p>
 
-    <div class="text-center">
-        <iframe style="border: 1px solid #999;width: 80%; height: 500px"
-                src="http://embed.plnkr.co/SOcUk1" frameborder="0"
-                allowfullscreen="allowfullscreen">
-            Loading plunk...
-        </iframe>
-    </div>
+    <p class="note">The mapping can support multi-level mapping like "myObject.myInnerProperty"</p>
 
-    <h3>Date and numeric filtering</h3>
-
-    <p>
-        In this example, date range or number range may filter data.
-    </p>
-
-    <div class="text-center">
-        <iframe style="border: 1px solid #999;width: 80%; height: 500px"
-                src="http://embed.plnkr.co/Idbc1JNHKylHuX6mNwZ6" frameborder="0"
-                allowfullscreen="allowfullscreen">
-            Loading plunk...
-        </iframe>
-    </div>
-</section>
-
-<section class="clearfix" id="section-selection" ng-controller="selectionCtrl">
-    <h2 class="h2">Select data rows</h2>
-    <p class="text-justify">
-			The <code>stSelectRow</code> will make the rows selectable. Bind it with the rows and then set the selection mode with the <code>stSelectRow</code> plugin. If you don't specify the selection mode, it will be <em>single</em>
-			When a row is selected, the property <em>isSelected</em> is set to true on the row object and the class attribute <em>st-selected</em> is set on the tr element.
-    </p>
-
-    <tabset>
-        <tab heading="markup">
-<pre ng-non-bindable=""><code class="language-markup">&lt;table st-table="rowCollection" class="table">
-&lt;thead>
-&lt;tr>
-	&lt;th st-sort="firstName">first name&lt;/th>
-	&lt;th st-sort="lastName">last name&lt;/th>
-	&lt;th st-sort="birthDate">birth date&lt;/th>
-	&lt;th st-sort="balance">balance&lt;/th>
-	&lt;th>email&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in rowCollection">
-	&lt;td>{{row.firstName | uppercase}}&lt;/td>
-	&lt;td>{{row.lastName}}&lt;/td>
-	&lt;td>{{row.birthDate | date}}&lt;/td>
-	&lt;td>{{row.balance | currency}}&lt;/td>
-	&lt;td>&lt;a ng-href="mailto:{{row.email}}">email&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></code></pre></tab>
-			<tab heading="javascript">
-<pre><code class="language-javascript">app.controller('selectionCtrl', ['$scope', '$filter', function (scope, filter) {
+    <div class="tab-container">
+        <tabs>
+            <pane heading="JavaScript">
+                 <pre><code class="language-javascript">app.controller('basicsCtrl', ['$scope', function (scope) {
     scope.rowCollection = [
         {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
         {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
         {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
     ];
-}]);</code></pre>
-        </tab>
-    </tabset>
-	<div class="table-container">
-		<table st-table="rowCollection" class="table">
-			<thead>
-			<tr>
-				<th st-sort="firstName">first name</th>
-				<th st-sort="lastName">last name</th>
-				<th st-sort="birthDate">birth date</th>
-				<th st-sort="balance">balance</th>
-				<th>email</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in rowCollection">
-				<td>{{row.firstName | uppercase}}</td>
-				<td>{{row.lastName}}</td>
-				<td>{{row.birthDate | date}}</td>
-				<td>{{row.balance | currency}}</td>
-				<td><a ng-href="mailto:{{row.email}}">email</a></td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="text-center">
-		<a class="btn btn-primary" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/selection"><i class="glyphicon glyphicon-pencil"></i> improve the documentation</a>
-	</div>
-</section>
-<section class="clearfix" id="section-pagination" ng-controller="paginationCtrl">
-	<h2 class="h2">Client side Pagination</h2>
 
-	<p class="text-center">
-		This is actually the only plugin which defines its own template. But the template fits good with the popular css
-		library <em>bootstrap</em> from Twitter.
-		You can also change the number of items by page dynamically with the bound attribute <code>st-items-by-page</code> and the number of displayed pages in the pagination directive with the attribute <code>st-displayed-pages</code>.
-		You can set these attributes to a static value as well
-	</p>
-	<tabset><tab heading="markup">
-<pre ng-non-bindable><code class="language-markup">&lt;table st-table="rowCollection" class="table table-striped">
-		&lt;thead>
-		&lt;tr>
-			&lt;th st-sort="firstName">first name&lt;/th>
-			&lt;th st-sort="lastName">last name&lt;/th>
-			&lt;th st-sort="birthDate">birth date&lt;/th>
-			&lt;th st-sort="balance">balance&lt;/th>
-			&lt;th>email&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th>
-				&lt;input st-search="'firstName'" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-			&lt;/th>
-			&lt;th colspan="4">
-				&lt;input st-search placeholder="global search" class="input-sm form-control" type="search"/>
-			&lt;/th>
-		&lt;/tr>
-		&lt;/thead>
-		&lt;tbody>
-		&lt;tr ng-repeat="row in rowCollection">
-			&lt;td>{{row.firstName | uppercase}}&lt;/td>
-			&lt;td>{{row.lastName}}&lt;/td>
-			&lt;td>{{row.birthDate | date}}&lt;/td>
-			&lt;td>{{row.balance | currency}}&lt;/td>
-			&lt;td>&lt;a ng-href="mailto:{{row.email}}">email&lt;/a>&lt;/td>
-		&lt;/tr>
-		&lt;/tbody>
-		&lt;tfoot>
-			&lt;tr>
-				&lt;td colspan="5" class="text-center">
-					&lt;div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7">&lt;/div>
-				&lt;/td>
-			&lt;/tr>
-		&lt;/tfoot>
-	&lt;/table></code></pre>
-	</tab>
-		<tab heading="JavaScript">
-<pre><code class="language-javascript">app.controller('paginationCtrl', ['$scope', function (scope) {
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName'},
+        {label: 'same same but different', map: 'firstName'},
+        {label: 'Last Name', map: 'lastName'}
+    ];
+}]);</code></pre>
+            </pane>
+            <pane active heading="Markup">
+            <pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="basicsCtrl">
+    &lt;smart-table columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+            </pane>
+        </tabs>
+    </div>
+    <div class="table-container">
+        <smart-table class="table table-striped" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+</section>
+
+<section id="section-format" ng-controller="formatCtrl">
+    <h2>Format data</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/format"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>
+        In our previous examples the data were displayed as raw strings,but what if we want to format date, currency and so on in a proper way ?
+        In the column configuration, you can specify how to format the data for the given column by adding <em>formatFunction</em> and <em>formatParameter</em>
+        properties.
+    </p>
+    <ul>
+        <li>The <em>formatFunction</em> can be a function either a string
+            <ul>
+                <li>If it is a string, it is expected to be one of the angular filters name. The displayed data will be as if you have used the angular filter.</li>
+                <li>If you use a function, it must take the value to format as first parameter, then an optional <em>formatParameter</em>
+<pre><code class="language-javascript">function (value, formatParameter) {
+    //do some stuff
+    return formatedValue;
+}</code></pre>
+                </li>
+            </ul>
+        </li>
+        <li>The formatParameter is an optional parameter to pass to the format function. If you use one of the built in angular filter it will be for example the symbol you pass to the currency filter.</li>
+    </ul>
+    <tabs>
+        <pane heading="JavaScript">
+<pre><code class="language-javascript">app.controller('sortCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName', formatFunction: function (value, formatParameter) {
+            //this only display the first letter
+            return value[0];
+        }},
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$'}
+    ];
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="formatCtrl">
+    &lt;smart-table columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+</section>
+<section id="section-sort" ng-controller="sortCtrl">
+    <h2>Sort data</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/sort"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>You may also want to sort the data rows. By default the table sort the data rows following the <a href="http://docs.angularjs.org/api/ng.filter:orderBy">orderBy</a> angular algorithm but you can also use your own
+        algorithm (see below). When you click on one of the column header the orderBy algorithm will sort the data rows according to these rules
+    </p>
+    <ul>
+        <li>if you have set the <em>sortPredicate</em> property on the column config : it will use it as predicate for the orderBy algorithm (see <a href="http://docs.angularjs.org/api/ng.filter:orderBy">angular documentation</a>)</li>
+        <li>otherwise it will use the property name the column is mapped to as predicate for the orderBy algorithm (it simply means it will sort the data rows according to the clicked column values) </li>
+    </ul>
+
+    <p>You can also disable the sort function for a given column by setting the <em>isSortable</em> property to false (it is true by default)</p>
+    <tabs>
+        <pane heading="JavaScript">
+<pre><code class="language-javascript">app.controller('sortCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName', sortPredicate: function (dataRow) {
+//predicate as a function (see angular orderby documentation) : it will sort by the string length
+            return dataRow.firstName.length;
+        } },
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$'},
+        {label: 'e-mail', map: 'email', isSortable: false}
+    ];
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="sortCtrl">
+    &lt;smart-table columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    <h3>Use your own algorithm</h3>
+    <p>If you would like to use your own sort algorithm instead of the orderBy from Angular you also can. That is where our table configuration comes.
+        You can bind the table-configuration attribute to an object that will represent the table "global" configuration. One of the global property is the
+        sort algorithm (<em>sortAlgorithm</em>).
+    </p>
+<pre><code class="language-javascript">function customSortAlgorithm(arrayRef, sortPredicate, reverse) {
+//do some stuff
+    return sortedArray;
+}</code></pre>
+</section>
+<section id="section-filter" ng-controller="filterCtrl">
+    <h2>Search/filter data</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/filter"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>The <a href="#">table controller API</a> gives you a way to filter the data comparing an input to both a given column values or in the whole table.
+        To display an input textbox for a global search (in the whole table) you just have to set the <em>isGlobalSearchActivated</em> property to true in the table global config object. The algorithm used
+        will be the one used by the <a href="http://docs.angularjs.org/api/ng.filter:filter">filter</a> filter from Angular. Of course, if you want to use your own, you can specify it in the global config (see below)
+    </p>
+    <tabs>
+        <pane heading="JavaScript">
+<pre><code class="language-javascript">app.controller('filterCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName'},
+        //the headerTemplateUrl property will be explained later, the purpose here is to show we can filter also by column only
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase', headerTemplateUrl: 'assets/template/customHeader.html'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$'},
+        {label: 'e-mail', map: 'email', isSortable: false}
+    ];
+    scope.globalConfig = {
+        isGlobalSearchActivated: true
+    };
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="filterCtrl">
+    &lt;smart-table config="globalConfig" columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    <h3>Use your own algorithm</h3>
+    <p>In the same way than for the sort operation you can use you own algorithm, you just have to specify the function you want to use in the global config
+        under the property <em>filterAlgorithm</em></p>
+<pre><code class="language-javascript">function customFilter(arrayRef, expression) {
+    //do some stuff
+    return filteredArray;
+}</code></pre>
+</section>
+<section id="section-selection" ng-controller="selectionCtrl">
+    <h2>Select data rows</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/selection"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>You can select data row according to two different modes : single or multiple (of course you can disable selection) by setting the global
+        property <em>selectionMode</em> to <em>single</em> or <em>multiple</em> (any other value will be taken as selectionMode='none'). This is the only time the table changes
+        a property value into your model: it add the "isSelected" property to your data model object. On one hand you can consider it "pollutes" your model but
+        on the other hand it allows the parent scope to quickly have a list of the selected items without relying on events. If you are in selectionMode="multiple" you can add a selection checkbox
+        column by setting the global property <em>displaySelectionCheckbox</em> to true</p>
+    <p class="note">Even though the configuration is dynamic the table does not prevent forbidden states : for example if you switch from selectionMode='single'
+        to 'none' with a selected item, the item will remain selected. It is the responsability of the parent scope/controller to reset the selected item</p>
+
+    <h3>Keep track of the changes in selection</h3>
+    <p>As mentioned before, whenever a row is selected/unselected the property isSelected change on the particular bound item. You can of course watch your model
+        to see when the selected items change however this is not really efficient regarding the performances. That is why an <em>selectionChange</em> event is emitted every time
+        there is something changed.
+    </p>
+
+    <tabs>
+        <pane heading="javascript">
+<pre><code class="language-javascript">app.controller('selectionCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName'},
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$'},
+        {label: 'e-mail', map: 'email'}
+    ];
+
+    //keep track of selected items
+    scope.$on('selectionChange', function (event, args) {
+        console.log(args);
+    });
+
+    scope.globalConfig = {
+        selectionMode: 'multiple',
+        displaySelectionCheckbox: true
+    };
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre><code class="language-markup">&lt;div ng-controller="selectionCtrl">
+    &lt;smart-table config="globalConfig" columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    <div class="side-controls">
+        <label ng-show="canDisplayCheckbox()" for="selection-checkbox">display checkbox:</label>
+        <input ng-show="canDisplayCheckbox()" id="selection-checkbox" type="checkbox" ng-model="globalConfig.displaySelectionCheckbox"/>
+        <label>selection mode:</label>
+        <select ng-model="globalConfig.selectionMode">
+            <option value="none">none</option>
+            <option value="single">single</option>
+            <option value="multiple">multiple</option>
+        </select>
+    </div>
+    <ul class="output-list">
+        <li ng-repeat="row in rowCollection">{{ row | json}}</li>
+    </ul>
+
+
+</section>
+<section id="section-edit" ng-controller="editCtrl">
+    <h2>Edit cell</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/edit"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>You can make the cells of a given column editable by simply setting the <em>isEditable</em> property to true in this column config. This will allow
+        you to edit directly the property on the data model object. Therefore, you may want to specify which type of input the cell will accept. You just
+        have to set the <em>type</em> property to the the type you want (email, number, etc). If the input is valid the model is updated, otherwise it will keep
+        the previous value</p>
+    <h3>notify an item has been updated</h3>
+    <p>In the same way than for selection changes, you don't want to watch the whole collection to know when a given property of a given item has bee updated. That
+    is why smart-table will raise the <em>updateDataRow</em> event to notify the parent scope when a row has been modified.</p>
+    <ul class="note">
+        <li>The data will be filtered/sorted after editing accordingly to the last settings</li>
+        <li>Double click to edit</li>
+    </ul>
+    <tabs>
+        <pane heading="javascript">
+<pre><code class="language-javascript">app.controller('editCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    //every time a data row is updated
+    scope.$on('updateDataRow', function (event, arg) {
+        console.log(arg);
+    });
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName', isEditable: true},
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date', isEditable: true, type: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$', isEditable: true, type: 'number'},
+        {label: 'e-mail', map: 'email', isEditable: true, type: 'email'}
+    ];
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="editCtrl">
+    &lt;smart-table config="globalConfig" columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    <ul class="output-list">
+        <li ng-repeat="row in rowCollection">{{ row | json}}</li>
+    </ul>
+</section>
+
+<section id="section-style" ng-controller="styleCtrl">
+    <h2>Simple styling</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/style"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>This allows you to add a class name for the cells in a given column, and for the header as well. You'll have to specify the
+        <em>headerClass</em> and <em>cellClass</em> property in the column configuration</p>
+    <tabs>
+        <pane heading="javascript">
+<pre><code class="language-javascript">app.controller('styleCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName', headerClass: "firstName-header"},
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase', cellClass: "lastName-cell"},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency'},
+        {label: 'e-mail', map: 'email'}
+    ];
+}]);</code></pre>
+        </pane>
+<pane heading="css">
+<pre><code class="language-css">.firstName-header{
+text-decoration: underline;
+}
+
+.lastName-cell{
+color: red;
+}</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre ng-non-bindable><code class="language-markup">&lt;div ng-controller="styleCtrl>
+    &lt;smart-table  columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+</section>
+<section id="section-cellTemplate" ng-controller="cellTemplateCtrl">
+    <h2>Cell Template</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/cellTemplate"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>If you prefer to use a particular template for the cells in a given column, you can do it by specifying the <em>cellTemplateUrl</em> property in the column config
+        this is useful not only for styling purpose but also if you want to enhance the behavior of the cell. The template will be compiled so that if it contains
+        directives they will be considered as angular directives. Moreover, these directives can have access to all the row and column data through the scope
+    </p>
+        <pre ><code class="language-javascript">scope.column;//the column object
+scope.dataRow;//the data row object
+scope.formatedValue;//the formated value (not the raw string)</code></pre>
+    <ul class="note"><li>You can use the table controller api in your directive</li>
+    <li>If you use your own template you may break some functionalities (particularly the edit function) and you will have to implement them
+        in your template/directive</li></ul>
+    <tabs>
+        <pane heading="javascript">
+                <pre class="language-javascript"><code
+                        class="language-javascript">app.controller('cellTemplateCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName'},
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency'},
+        {label: 'e-mail', map: 'email'},
+        {label: 'Favourite color', cellTemplateUrl: 'assets/template/custom.html'}
+    ];
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+                <pre ng-non-bindable data-line="1"><code class="language-markup">&lt;div>
+    &lt;smart-table columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+        <pane heading="custom.html">
+            <pre ng-non-bindable><code class="language-markup">&lt;custom>&lt;/custom></code></pre>
+        </pane>
+        <pane heading="custom.js">
+                <pre><code class="language-javascript">app.directive('custom', function () {
+    return {
+        restrict: 'E',
+        //include smart table controller to use its API if needed
+        require: '^smartTable',
+        template: '&lt;select ng-model="favouriteColor">' +
+                '&lt;option value="">--choose favorite color--&lt;/option>' +
+                '&lt;option value="red">red&lt;/option>' +
+                '&lt;option value="blue">blue&lt;/option>' +
+                '&lt;option value="yellow">yellow&lt;/option>' +
+                '&lt;/select>',
+        replace: true,
+        link: function (scope, element, attrs, ctrl) {
+            //can use scope.dataRow, scope.column, scope.formatedValue, and ctrl API
+
+            var allowedColors = ['red', 'yellow', 'blue'];
+
+            scope.$watch('favouriteColor', function (value) {
+                if (allowedColors.indexOf(value) != -1) {
+                    scope.dataRow.favouriteColor = scope.favouriteColor;
+                }
+            });
+        }
+    };
+});</code></pre>
+        </pane>
+    </tabs>
+    <div class="table-container">
+        <smart-table class="table table-striped" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    <ul class="output-list">
+        <li ng-repeat="row in rowCollection">{{ row | json}}</li>
+    </ul>
+    <p>In the same way you can assign a custom template to the column header thanks to the column property <em>headerTemplateUrl</em>. See the source code
+        of the previous filter section as an example.</p>
+    <tabs>
+        <pane heading="JavaScript">
+                <pre class="language-javascript"><code>app.controller('filterCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName'},
+        {label: 'Last Name', map: 'lastName', formatFunction: 'uppercase', headerTemplateUrl: 'assets/template/customHeader.html'},
+        {label: 'Birth Date', map: 'birthDate', formatFunction: 'date'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$'},
+        {label: 'e-mail', map: 'email'}
+    ];
+    scope.globalConfig = {
+        isGlobalSearchActivated: true
+    };
+}]);</code></pre>
+        </pane>
+        <pane heading="markup" >
+<pre ng-non-bindable class="language-markup"><code>&lt;div ng-controller="filterCtrl">
+    &lt;smart-table config="globalConfig" columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+        <pane heading="customHeader.html" >
+                <pre ng-non-bindable class="language-markup"><code>&lt;span>{{column.label}}&lt;/span>
+&lt;input class="column-filter" type="text" ng-model="searchValue" /></code></pre>
+        </pane>
+        <pane heading="customHeader.js" >
+<pre class="language-javascript"><code>app.directive('columnFilter', function () {
+    return {
+        restrict: 'C',
+        require: '^smartTable',
+        link: function (scope, element, attrs, ctrl) {
+            scope.searchValue = '';
+            scope.$watch('searchValue', function (value) {
+                ctrl.search(value, scope.column);
+            })
+        }
+    }
+});</code></pre>
+        </pane>
+    </tabs>
+</section>
+
+<section id="section-pagination" ng-controller="paginationCtrl">
+    <h2>Client side Pagination</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/pagination"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>If you don't want to display too much data at the time you'll be happy using the pagination feature. It uses the <a href="https://github.com/angular-ui/bootstrap/tree/master/src/pagination">angular.ui-boostrap pagination directive</a> and you'll be able
+        to configure it through some global config properties. First of all, the property <em>isPaginationEnabled</em> must be set to true. Then you can decide the
+        number of pages you want to display with the <em>maxSize</em> property and the number of items you want to display on a page thanks to the <em>itemsByPage</em> property</p>
+    <ul class="note"><li>You may wonder why it has been decided to implement a client side pagination and not a server side pagination. Well in my opinion it does not
+        make sens to have the pagination on server side when you have the sort/filter on the client side. If you sort the data on the client side, but some are not loaded yet do you think the displayed
+        data are really relevant. I don't.</li>
+    <li>the event "pageChange" is emitted when the page is changed</li>
+    </ul>
+
+    <tabs>
+        <pane heading="JavaScript">
+<pre class="language-javascript"><code>app.controller('paginationCtrl', ['$scope', function (scope) {
     var
-        nameList = ['Pierre', 'Pol', 'Jacques', 'Robert', 'Elisa'],
-        familyName = ['Dupont', 'Germain', 'Delcourt', 'bjip', 'Menez'];
+            nameList = ['Pierre', 'Pol', 'Jacques', 'Robert', 'Elisa'],
+            familyName = ['Dupont', 'Germain', 'Delcourt', 'bjip', 'Menez'];
 
     function createRandomItem() {
         var
-            firstName = nameList[Math.floor(Math.random() * 4)],
-            lastName = familyName[Math.floor(Math.random() * 4)],
-            age = Math.floor(Math.random() * 100),
-            email = firstName + lastName + '@whatever.com',
-            balance = Math.random() * 3000;
+                firstName = nameList[Math.floor(Math.random() * 4)],
+                lastName = familyName[Math.floor(Math.random() * 4)],
+                age = Math.floor(Math.random() * 100),
+                email = firstName + lastName + '@whatever.com',
+                balance = Math.random() * 3000;
 
         return{
             firstName: firstName,
@@ -917,457 +617,50 @@ app.filter('unique', function() {
         };
     }
 
-		scope.itemsByPage=15;
-
     scope.rowCollection = [];
     for (var j = 0; j < 200; j++) {
         scope.rowCollection.push(createRandomItem());
     }
-}]);</code></pre>
-		</tab>
-	</tabset>
 
-	<label for="items">items by page</label>
-	<input class="input-sm form-control" name="items" id="items" type="number" ng-model="itemsByPage" />
-
-	<table st-table="rowCollection" class="table table-striped">
-		<thead>
-		<tr>
-			<th st-sort="firstName">first name</th>
-			<th st-sort="lastName">last name</th>
-			<th st-sort="birthDate">birth date</th>
-			<th st-sort="balance">balance</th>
-			<th>email</th>
-		</tr>
-		<tr>
-			<th>
-				<input st-search="'firstName'" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-			</th>
-			<th colspan="4">
-				<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
-			</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr ng-repeat="row in rowCollection">
-			<td>{{row.firstName | uppercase}}</td>
-			<td>{{row.lastName}}</td>
-			<td>{{row.birthDate | date}}</td>
-			<td>{{row.balance | currency}}</td>
-			<td><a ng-href="mailto:{{row.email}}">email</a></td>
-		</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td colspan="5" class="text-center">
-					<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
-				</td>
-			</tr>
-		</tfoot>
-	</table>
-
-	<div class="text-center">
-		<a class="btn btn-primary"
-			 href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/pagination"><i
-			class="glyphicon glyphicon-pencil"></i> improve the documentation</a>
-	</div>
-</section>
-<section id="section-pipe" class="clearfix" ng-controller="pipeCtrl">
-	<h2 class="h2">pipe/ajax plugin</h2>
-	<p>
-		This might be the most powerful plugin. When a directive calls the table controller api (sortBy, search, slice, ...) a variable representing the internal
-		table state is updated and a <em>pipe</em> function is called. By default it basically pipes the filter, sort and slice(pagination) operations on the bound array.
-		But with this directive you can overwrite the default pipe function which can be handy to call your server. The function takes as arguments, the object which represents
-		the table state, and a reference to the table controller.
-	</p>
-	<p class="bg-info padding text-justify">
-		Note that if you want the pagination directive to update, you must set in your pipe function, the total number of pages as smart-table has no clue about your dataset and this information has to come
-		from your server.
-	</p>
-	<tabset><tab heading="markup">
-<pre ng-non-bindable><code class="language-markup">
-&lt;table class="table" st-pipe="mc.callServer" st-table="mc.displayed">
-	&lt;thead>
-	&lt;tr>
-		&lt;th st-sort="id">id&lt;/th>
-		&lt;th st-sort="name">name&lt;/th>
-		&lt;th st-sort="age">age&lt;/th>
-		&lt;th st-sort="saved">saved people&lt;/th>
-	&lt;/tr>
-	&lt;tr>
-		&lt;th>&lt;input st-search="id"/>&lt;/th>
-		&lt;th>&lt;input st-search="name"/>&lt;/th>
-		&lt;th>&lt;input st-search="age"/>&lt;/th>
-		&lt;th>&lt;input st-search="saved"/>&lt;/th>
-	&lt;/tr>
-	&lt;/thead>
-	&lt;tbody ng-show="!mc.isLoading">
-	&lt;tr ng-repeat="row in mc.displayed">
-		&lt;td>{{row.id}}&lt;/td>
-		&lt;td>{{row.name}}&lt;/td>
-		&lt;td>{{row.age}}&lt;/td>
-		&lt;td>{{row.saved}}&lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-	&lt;tbody ng-show="mc.isLoading">
-	&lt;tr>
-		&lt;td colspan="4" class="text-center">Loading ... &lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-	&lt;tfoot>
-	&lt;tr>
-		&lt;td class="text-center" st-pagination="" st-items-by-page="10" colspan="4">
-		&lt;/td>
-	&lt;/tr>
-	&lt;/tfoot>
-&lt;/table>	
-</code></pre>
-	</tab>
-		<tab heading="Controller">
-<pre><code class="language-javascript">app.controller('pipeCtrl', ['Resource', function (service) {
-
-  var ctrl = this;
-
-  this.displayed = [];
-
-  this.callServer = function callServer(tableState) {
-
-    ctrl.isLoading = true;
-
-    var pagination = tableState.pagination;
-
-    var start = pagination.start || 0;     // This is NOT the page number, but the index of item in the list that you want to use to display the table.
-    var number = pagination.number || 10;  // Number of entries showed per page.
-
-    service.getPage(start, number, tableState).then(function (result) {
-      ctrl.displayed = result.data;
-      tableState.pagination.numberOfPages = result.numberOfPages;//set the number of pages so the pagination can update
-      ctrl.isLoading = false;
-    });
-  };
-
-}])
-</code></pre>
-		</tab>
-		<tab heading="Service">
-			<pre><code class="language-javascript">
-	app.factory('Resource', ['$q', '$filter', '$timeout', function ($q, $filter, $timeout) {
-
-	//this would be the service to call your server, a standard bridge between your model an $http
-
-	// the database (normally on your server)
-	var randomsItems = [];
-
-	function createRandomItem(id) {
-		var heroes = ['Batman', 'Superman', 'Robin', 'Thor', 'Hulk', 'Niki Larson', 'Stark', 'Bob Leponge'];
-		return {
-			id: id,
-			name: heroes[Math.floor(Math.random() * 7)],
-			age: Math.floor(Math.random() * 1000),
-			saved: Math.floor(Math.random() * 10000)
-		};
-
-	}
-
-	for (var i = 0; i < 1000; i++) {
-		randomsItems.push(createRandomItem(i));
-	}
-
-
-	//fake call to the server, normally this service would serialize table state to send it to the server (with query parameters for example) and parse the response
-	//in our case, it actually performs the logic which would happened in the server
-	function getPage(start, number, params) {
-
-		var deferred = $q.defer();
-
-		var filtered = params.search.predicateObject ? $filter('filter')(randomsItems, params.search.predicateObject) : randomsItems;
-
-		if (params.sort.predicate) {
-			filtered = $filter('orderBy')(filtered, params.sort.predicate, params.sort.reverse);
-		}
-
-		var result = filtered.slice(start, start + number);
-
-		$timeout(function () {
-			//note, the server passes the information about the data set size
-			deferred.resolve({
-				data: result,
-				numberOfPages: Math.ceil(filtered.length / number)
-			});
-		}, 1500);
-
-
-		return deferred.promise;
-	}
-
-	return {
-		getPage: getPage
-	};
-
-}]);</code></pre>
-		</tab>
-	</tabset>
-	<div class="table-container" ng-controller="pipeCtrl as mc">
-		<table class="table" st-pipe="mc.callServer" st-table="mc.displayed">
-			<thead>
-			<tr>
-				<th st-sort="id">id</th>
-				<th st-sort-default="reverse" st-sort="name">name</th>
-				<th st-sort="age">age</th>
-				<th st-sort="saved">saved people</th>
-			</tr>
-			<tr>
-				<th><input st-search="id"/></th>
-				<th><input st-search="name"/></th>
-				<th><input st-search="age"/></th>
-				<th><input st-search="saved"/></th>
-			</tr>
-			</thead>
-			<tbody ng-show="!mc.isLoading">
-			<tr ng-repeat="row in mc.displayed">
-				<td>{{row.id}}</td>
-				<td>{{row.name}}</td>
-				<td>{{row.age}}</td>
-				<td>{{row.saved}}</td>
-			</tr>
-			</tbody>
-			<tbody ng-show="mc.isLoading">
-			<tr>
-				<td colspan="4" class="text-center"><div class="loading-indicator"></div>
-				</td>
-			</tr>
-			</tbody>
-			<tfoot>
-			<tr>
-				<td class="text-center" st-pagination="" st-items-by-page="10" colspan="4">
-				</td>
-			</tr>
-			</tfoot>
-		</table>
-	</div>
-	<p>Wow impressive, we just have plugged our table with a server. Of course in our example the data is random and not consistent with the event which triggered the request, but in reallity the server would sort, filter, slice according to the query</p>
-	<div class="text-center">
-		<a class="btn btn-primary" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/pipe"><i class="glyphicon glyphicon-pencil"></i> improve the documentation</a>
-	</div>
-</section>
-
-<section class="clearfix">
-  <h2 class="h2">Global configuration</h2>
-
-  <p>Instead of changing configurable properties via attributes, you can inject <code>stConfig</code> during the
-    configuration step, and change specific global configurable properties. <strong>Attributes will always override any
-      global <code>stConfig</code> properties.</strong> <a
-      href="https://github.com/lorenzofox3/Smart-Table/blob/master/src/stConfig.js">See the defaults here.</a> For
-    example:</p>
-
-	<pre ng-non-bindable=""><code class="language-javascript">angular.module('myModule', []).config(function(stConfig) {
-  stConfig.pagination.template = 'my-custom-pagination-tmpl.html';
-});</code></pre>
-
-</section>
-<section class="clearfix" id="section-custom" ng-controller="customCtrl">
-		<h2 class="h2">Create your own plugin</h2>
-	<p class="text-justify">
-		It is pretty easy to plug your own plugin into smart table. You just have to require the main directive so you will get access to the controller API.
-		Let's have an example: I want my plugin to give me a way to select data with a check box.
-	</p>
-
-	<tabset>
-		<tab heading="Markup">
-			<pre ng-non-bindable="">
-				<code class="language-markup">
-&lt;table st-table="rowCollection" class="table">
-	&lt;thead>
-	&lt;tr>
-		&lt;th>&lt;/th>
-		&lt;th st-sort="firstName">first name&lt;/th>
-		&lt;th st-sort="lastName">last name&lt;/th>
-		&lt;th st-sort="birthDate">birth date&lt;/th>
-		&lt;th st-sort="balance">balance&lt;/th>
-		&lt;th>email&lt;/th>
-	&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-	&lt;tr ng-repeat="row in rowCollection">
-		&lt;td cs-select="row">&lt;/td>
-		&lt;td>{{row.firstName | uppercase}}&lt;/td>
-		&lt;td>{{row.lastName}}&lt;/td>
-		&lt;td>{{row.birthDate | date}}&lt;/td>
-		&lt;td>{{row.balance | currency}}&lt;/td>
-		&lt;td>&lt;a ng-href="mailto:{{row.email}}">email&lt;/a>&lt;/td>
-	&lt;/tr>
-	&lt;/tbody>
-&lt;/table>
-				</code>
-			</pre>
-		</tab>
-		<tab heading="Javascript">
-			<pre ng-non-bindable="">
-				<code class="language-javascript">
-app.controller('customCtrl', ['$scope', function (scope) {
-    scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    scope.columnCollection = [
+        {label: 'First Name', map: 'firstName'},
+        {label: 'Last Name', map: 'lastName'},
+        {label: 'Age', map: 'age'},
+        {label: 'Balance', map: 'balance', formatFunction: 'currency', formatParameter: '$'},
+        {label: 'e-mail', map: 'email'}
     ];
-}]);
-app.directive('csSelect', function () {
-    return {
-        require: '^stTable',
-        template: '&lt;input type="checkbox"/>',
-        scope: {
-            row: '=csSelect'
-        },
-        link: function (scope, element, attr, ctrl) {
 
-            element.bind('change', function (evt) {
-                scope.$apply(function () {
-                    ctrl.select(scope.row, 'multiple');
-                });
-            });
-
-            scope.$watch('row.isSelected', function (newValue, oldValue) {
-                if (newValue === true) {
-                    element.parent().addClass('st-selected');
-                } else {
-                    element.parent().removeClass('st-selected');
-                }
-            });
-        }
+    scope.globalConfig = {
+        isPaginationEnabled: true,
+        itemsByPage: 12,
+        maxSize: 8
     };
-});
+}]);</code></pre>
+        </pane>
+        <pane heading="markup">
+<pre class="language-markup" ng-non-bindable><code>&lt;div ng-controller="paginationCtrl">
+    &lt;smart-table config="globalConfig" columns="columnCollection" rows="rowCollection">&lt;/smart-table>
+&lt;/div></code></pre>
+        </pane>
+    </tabs>
 
-				</code>
-			</pre>
-		</tab>
-	</tabset>
-
-	<table st-table="rowCollection" class="table">
-		<thead>
-		<tr>
-			<th></th>
-			<th st-sort="firstName">first name</th>
-			<th st-sort="lastName">last name</th>
-			<th st-sort="birthDate">birth date</th>
-			<th st-sort="balance">balance</th>
-			<th>email</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr ng-repeat="row in rowCollection">
-			<td cs-select="row"></td>
-			<td>{{row.firstName | uppercase}}</td>
-			<td>{{row.lastName}}</td>
-			<td>{{row.birthDate | date}}</td>
-			<td>{{row.balance | currency}}</td>
-			<td><a ng-href="mailto:{{row.email}}">email</a></td>
-		</tr>
-		</tbody>
-	</table>
-
-	<h3 id="custom-build" class="h3">Custom build</h3>
-	<p>
-		You can easily custom you build of smart-table. Let's say, since you have created you custom selection directive, you don't want the
-		<em>stSelectRow</em> plugin in smart-table, so it will be even lighter than it is now. Go to the <a href="#">gulpFile</a> modify the the
-		<code>pluginList</code> variable, then run <code>gulp build</code> and here you are !
-	</p>
-
-
+    <div class="table-container">
+        <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
 </section>
-
-<section class="clearfix" id="examples-section">
-  <h2 class="h2">More sophisticated examples</h2>
-
-  <p>This section aims to provide example to show how you can compose around smart-table. They remain basic but can
-    give ideas and inspiration.</p>
-
-  <h3 class="h3">Draggable headers</h3>
-
-  <p>An example on how to implement draggable headers so the row template can be reordered. It uses <a
-    href="https://github.com/lorenzofox3/lrDragNDrop">lrDragNDrop</a> for the drag and drop logic.</p>
-
-  <div class="text-center">
-    <iframe style="border: 1px solid #999;width: 80%; height: 500px"
-            src="http://embed.plnkr.co/DRagFo" frameborder="0"
-            allowfullscreen="allowfullscreen">
-      Loading plunk...
-    </iframe>
-  </div>
-
-  <h3 class="h3">Pagination on scroll</h3>
-
-  <p>This example shows how to implement pagination on scroll and remove the previous tr nodes as the user scroll down.
-    You will need to implement the same kind of logic when scrolling up though. The scroll logic is based on <a
-      href="https://github.com/lorenzofox3/lrInfiniteScroll">lrInfiniteScroll</a></p>
-
-  <div class="text-center">
-    <iframe style="border: 1px solid #999;width: 80%; height: 500px"
-            src="http://embed.plnkr.co/Qq2yfC" frameborder="0"
-            allowfullscreen="allowfullscreen">
-      Loading plunk...
-    </iframe>
-  </div>
-
-  <h3 class="h3">Persist table state in local storage</h3>
-
-  <p>This <a href="http://plnkr.co/edit/ekwiNt?p=preview">example</a> shows how to implement a plugin to persist table
-    state in the local storage so you are able to restore you table when the page is refreshed.</p>
-
-  <div class="text-center">
-    <a class="btn btn-primary"
-       href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/examples"><i
-      class="glyphicon glyphicon-pencil"></i> improve the documentation</a>
-  </div>
-
-  <h3 class="h3">Fix headers</h3>
-
-  <p>This example shows how to have fix headers with a pure css solution. It is also responsive as based on the
-    flex-model. A directive has been added to be able to change the space ratio occupied by each column.</p>
-
-  <div class="text-center">
-    <iframe style="border: 1px solid #999;width: 80%; height: 500px"
-            src="http://embed.plnkr.co/fcdXKE" frameborder="0"
-            allowfullscreen="allowfullscreen">
-      Loading plunk...
-    </iframe>
-  </div>
-
-  <p>If you want sticky headers you can have a look at <a href="https://github.com/lorenzofox3/lrStickyHeader">lrStickyHeader</a>
-    and its specific
-    <a href="https://github.com/lorenzofox3/stStickyHeader">smart-table directive</a></p>
-
-  <div class="text-center"><img src="http://i.imgur.com/ocN250H.gif" alt="sticky table header"/></div>
-
-  <h3 class="h3">Custom pagination</h3>
-
-  <p>This example shows how to use a custom template for the paginator, and how you can add more advanced functionality
-    such as an input field to jump to any page easily (great for very large sets of data).</p>
-
-  <div class="text-center">
-    <iframe style="border: 1px solid #999;width: 80%; height: 560px"
-            src="http://embed.plnkr.co/LB2f9P" frameborder="0"
-            allowfullscreen="allowfullscreen">
-      Loading plunk...
-    </iframe>
-  </div>
-
+<section id="section-config" ng-controller="configCtrl">
+    <h2>Configuration Summary</h2>
+    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/config"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
+    <p>Here is a summary of available configuration properties for column, and for global configuration</p>
+    <h4>Column</h4>
+    <div class="table-container">
+        <smart-table class="table table-striped"  columns="columnCollection" rows="rowCollectionColumn"></smart-table>
+    </div>
+    <h4>Global config</h4>
+    <div class="table-container">
+        <smart-table class="table table-striped"  columns="columnCollection" rows="rowCollectionConfig"></smart-table>
+    </div>
 </section>
-
 </div>
-<footer class="padding" id="main-footer" class="center-block">
-	<p class=" padding text-center">
-		&#169; RENARD Laurent, smart-table is released under MIT Licence
-	</p>
-</footer>
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-55364277-1', 'auto');
-	ga('send', 'pageview');
-
-</script>
 </body>
 </html>

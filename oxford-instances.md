@@ -14,6 +14,8 @@ title: Oxford Nanopore Workshop
 
 If the link opens in a new tab, right-click on the link and click "save as".
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTy6L0mbRe_8SYdzypAzlxJgSR2hDiWKUBIET00UrXj1rvPs3HDCnQdsmSfGXr3V8CywLwmRP6geM5F/pubhtml?gid=891834841&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
 
 Username              |  Hostname
 ----------------------|------------------------

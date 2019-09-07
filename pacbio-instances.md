@@ -7,43 +7,38 @@ title: PacBio Sequencing Workshop
 
 A remote computer (instance) on Amazon Web Services has been set up for use in training for each user. All instances are identical with the same working environment. You should be able to connect from PC, Mac or Linux. Please see below for the instructions.
 
-<section id="section-intro" ng-controller="paginationCtrl">
-    <h2>Introduction</h2>
-    <a class="btn doc" href="https://github.com/lorenzofox3/smart-table-website/tree/gh-pages/sections/Introduction"><i class="icon icon-edit"></i></a><span class="bubble">improve the documentation</span>
 
-    <p><strong>Smart table</strong> is an <a href="#">Angularjs</a> module to easily display data in a table with a set
-        of built in functionalities such filetering,
-        sorting, etc. While developing this module I made sure to focus on this particular points:</p>
-    <ul>
-        <li><strong>lightweight</strong>: smart-table is less than 13kb minified and has <strong>no
-            dependencies</strong> other than Angular itself
-        </li>
-        <li><strong>robust</strong>: smart-table is widely tested which makes the module really stable</li>
-        <li><strong>useful</strong>: smart-table will allow you to have a table on which you will be able to perform
-            common operations with <strong>simple</strong> configuration
-        </li>
-        <li><strong>developer friendly</strong>: the design of the module has been thought carefully and it is really
-            easy to get into the source code to modify/customise the module to best fit your needs.
-            You will find for example:
-            <ul>
-                <li>on the <a href="https://github.com/lorenzofox3/Smart-Table/tree/server-sample">different branches</a> of the project some custom implementation to turn
-                    smart-table into a server driven table while changing less than 10 lines
-                </li>
-
-                <li>on <a href="http://plnkr.co/edit/xsJs8m?p=preview">plunker</a>(here made by Jiri Kavulak) some custom implementation with richer
-                    functionalities
-                </li>
-            </ul>
-    </ul>
-    <p>Although smart-table is from far the best table module for angular :D, there are other table modules in the
-        angular ecosystem you might be interested in. The approach and philosophy are different and maybe more appropriate to your way of building web application. Among the most popular:</p>
-    <ul>
-        <li><a href="http://angular-ui.github.io/ng-grid/">ng-grid</a></li>
-        <li><a href="http://esvit.github.io/ng-table/#!/">ng-table</a></li>
-    </ul>
-
-    <p>If you want to play around, try this <a href="http://plnkr.co/edit/8Qectt?p=preview">plunker</a></p>
-</section>
+				<tab heading="javascript">
+<pre><code class="language-javascript">app.controller('basicsCtrl', ['$scope', function (scope) {
+    scope.rowCollection = [
+        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+    ];
+}]);
+</code></pre>
+				</tab>
+			</tabset>
+			<table st-table="rowCollection" class="table table-striped">
+				<thead>
+				<tr>
+					<th>first name</th>
+					<th>last name</th>
+					<th>birth date</th>
+					<th>balance</th>
+					<th>email</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="row in rowCollection">
+					<td>{{row.firstName}}</td>
+					<td>{{row.lastName}}</td>
+					<td>{{row.birthDate}}</td>
+					<td>{{row.balance}}</td>
+					<td>{{row.email}}</td>
+				</tr>
+				</tbody>
+			</table>
 			
 
 

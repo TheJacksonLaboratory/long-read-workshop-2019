@@ -7,6 +7,27 @@ title: PacBio Sequencing Workshop
 
 A remote computer (instance) on Amazon Web Services has been set up for use in training for each user. All instances are identical with the same working environment. You should be able to connect from PC, Mac or Linux. Please see below for the instructions.
 
+<table st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>first name</th>
+		<th>last name</th>
+		<th>birth date</th>
+		<th>balance</th>
+		<th>email</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in rowCollection">
+		<td>{{row.firstName}}</td>
+		<td>{{row.lastName}}</td>
+		<td>{{row.birthDate}}</td>
+		<td>{{row.balance}}</td>
+		<td>{{row.email}}</td>
+	</tr>
+	</tbody>
+</table>
+
 ### User Instances
     
 

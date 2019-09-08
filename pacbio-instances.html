@@ -90,17 +90,6 @@
 		<th st-sort="balance">balance</th>
 		<th>email</th>
 	</tr>
-	<tr>
-		<th>
-			<input st-search="firstName" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-		</th>
-		<th colspan="3">
-			<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
-		</th>
-		<th>
-			<input st-search="{{selectedPredicate}}" placeholder="bound predicate" class="input-sm form-control" type="search"/>
-		</th>
-	</tr>
 	</thead>
 	<tbody>
 	<tr ng-repeat="row in rowCollection">

@@ -74,36 +74,6 @@
 <section id="section-filter" ng-controller="filterCtrl">
     <div class="table-container">
         <smart-table class="table table-striped" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
-    <table st-table="rowCollection" class="table table-striped">
-    <thead>
-    <tr>
-        <th>first name</th>
-        <th>last name</th>
-        <th>birth date</th>
-        <th>balance</th>
-        <th>email</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="row in rowCollection">
-        <td>{{row.firstName | uppercase}}</td>
-        <td>{{row.lastName}}</td>
-        <td>{{row.birthDate | date}}</td>
-        <td>{{row.balance | currency}}</td>
-        <td>
-            <button class="btn btn-sm" popover-placement="top" popover="{{row.email}}" type="button">
-                <i class="glyphicon glyphicon-eye-open"></i>
-            </button>
-            <a ng-href="{{row.email}}">email</a></td>
-        <td>
-            <button type="button" ng-click="removeRow(row)" class="btn btn-sm btn-danger">
-                <i class="glyphicon glyphicon-remove-circle">
-                </i>
-            </button>
-        </td>
-    </tr>
-    </tbody>
-    </table>
     </div>
 </section>
 </div>

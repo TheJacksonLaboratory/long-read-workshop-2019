@@ -69,8 +69,5 @@ app.controller('filterCtrl', ['$scope', '$filter', function (scope, filter) {
         {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
     ];
 
-    scope.globalConfig = {
-            isGlobalSearchActivated: true
-    };
 }]);
 

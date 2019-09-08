@@ -69,7 +69,6 @@
 <p>A remote computer (instance) on Amazon Web Services has been set up for use in training for each user. All instances are identical with the same working environment. You should be able to connect from PC, Mac or Linux. Please see below for the instructions.</p>
 <h3 id="user-instances">User Instances</h3>
 
-<!--
 <div class="main">
 <section id="section-filter" ng-controller="filterCtrl">
     <div class="table-container">
@@ -77,42 +76,7 @@
     </div>
 </section>
 </div>
--->
 
-<div class="main">
-<section id="section-filter" ng-controller="filterCtrl">
-<div class="table-container">
-<table st-table="rowCollection" class="table table-striped">
-    <thead>
-    <tr>
-        <th st-sort="firstName">first name</th>
-        <th st-sort="lastName">last name</th>
-        <th st-sort="birthDate">birth date</th>
-        <th st-sort="balance">balance</th>
-        <th>email</th>
-    </tr>
-    <tr>
-        <th>
-            <input st-search="firstName" placeholder="search for firstname" class="input-sm form-control" type="search"/>
-        </th>
-        <th colspan="3">
-            <input st-search placeholder="global search" class="input-sm form-control" type="search"/>
-        </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="row in rowCollection">
-        <td>{{row.firstName | uppercase}}</td>
-        <td>{{row.lastName}}</td>
-        <td>{{row.birthDate | date}}</td>
-        <td>{{row.balance | currency}}</td>
-        <td><a ng-href="mailto:{{row.email}}">email</a></td>
-    </tr>
-    </tbody>
-</table>
-</div>
-</section>
-</div>
 
 
 <table>

@@ -15,6 +15,47 @@
     <!--<link rel="stylesheet" href="assets/lib/prism/prism.css"/>-->
 </head>
 <body ng-controller="mainCtrl">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://thejacksonlaboratory.github.io/long-read-workshop-2019/">The Jackson Laboratory</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/long-read-workshop-2019/">Home</a></li>
+          <li class="navlinks-container"><a class="navlinks-parent" href="javascript:void(0)">Workshops</a>
+            <div class="navlinks-children">
+            <a href="/long-read-workshop-2019/pacbio-instances">Pacific Biosciences</a>
+            <a href="/long-read-workshop-2019/10x-instances.html">10X Genomics</a>
+            <a href="/long-read-workshop-2019/smart-table.html">table test</a>
+            <a href="/long-read-workshop-2019/oxford-instances">Oxford Nanopore</a>
+            <a href="/long-read-workshop-2019/nanopolish-instances">Nanopolish</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+    
+    
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="https://thejacksonlaboratory.github.io/long-read-workshop-2019/ ">
+          <img class="avatar-img" src="/long-read-workshop-2019/img/avatar-icon.png" />
+        </a>
+      </div>
+    </div>
+    
+    
+  </div>
+  </nav>
+
+
 <div class="main">
 <section id="section-filter" ng-controller="filterCtrl">
     <h2>Search/filter data</h2>

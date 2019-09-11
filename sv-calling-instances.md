@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nanopolish Workshop
+title: SV Calling Workshop
 ---
 
 ### Instance Information

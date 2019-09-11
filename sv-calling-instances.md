@@ -38,6 +38,6 @@ user6     |  3.91.100.181    |  <a href='http://3.91.100.181:8080' target='_blan
 
 *Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/Jackson_lab_workshopSV_FS.docx).*
 
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop/raw/gh-pages/Jackson_lab_workshopSV_FS.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
+<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop-2019/raw/gh-pages/Jackson_lab_workshopSV_FS.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
 
 

@@ -22,7 +22,7 @@ $(document).ready( function () {
 } );
 
 </script>
-<table id="example" class="display" style="width:100%">
+<table id="example" class="display" style="width:100%" cellpadding="3px">
 <thead>
 <tr class="header">
 <th>Username</th>

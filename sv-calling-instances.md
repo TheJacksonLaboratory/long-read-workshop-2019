@@ -51,7 +51,6 @@ $(document).ready( function () {
 </table>
 
 ****
-****
 
 **Other ways to SSH into the instances**
 
@@ -62,12 +61,14 @@ $(document).ready( function () {
         Username: ubuntu-user
         Password: Lrs-2019
 
+2. You can also access a terminal in the Jupterlab framework. Type the 'ip_address' followed by port 8889. For example: 3.80.139.19:8889. 
+
 ****
 
 ### Workshop Data Analysis
 
 *Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/Jackson_lab_workshopSV_FS.docx).*
 
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop-2019/raw/gh-pages/Jackson_lab_workshopSV_FS.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
+<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop-2019/blob/gh-pages/docs/Jackson_lab_workshopSV_FS.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
 
 

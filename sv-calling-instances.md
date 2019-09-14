@@ -28,51 +28,26 @@ $(document).ready( function () {
 <table id="example" class="display" style="width:100%" cellpadding="3px">
 <thead>
 <tr class="header">
-<th>Username</th>
+<th>username</th>
 <th>IP</th>
-<th>Terminal</th>
-<th>Download files</th>
+<th><a href='http://IP:8080' target='_blank'>terminal</a></th>
+<th><a href='http://IP' target='_blank'>download files</a></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>user1</td>
-<td>54.204.220.226</td>
-<td><a href='http://54.204.220.226:8080' target='_blank'>terminal</a></td>
-<td><a href='http://54.204.220.226' target='_blank'>download files</a></td>
+<td>54.91.171.12</td>
+<td><a href='http://54.91.171.12:8080' target='_blank'>terminal</a></td>
+<td><a href='http://54.91.171.12' target='_blank'>download files</a></td>
 </tr>
 <tr class="even">
 <td>user2</td>
-<td>52.5.108.218</td>
-<td><a href='http://52.5.108.218:8080' target='_blank'>terminal</a></td>
-<td><a href='http://52.5.108.218' target='_blank'>download files</a></td>
-</tr>
-<tr class="odd">
-<td>user3</td>
-<td>54.159.9.62</td>
-<td><a href='http://54.159.9.62:8080' target='_blank'>terminal</a></td>
-<td><a href='http://54.159.9.62' target='_blank'>download files</a></td>
-</tr>
-<tr class="even">
-<td>user4</td>
-<td>54.227.77.41</td>
-<td><a href='http://54.227.77.41:8080' target='_blank'>terminal</a></td>
-<td><a href='http://54.227.77.41' target='_blank'>download files</a></td>
-</tr>
-<tr class="odd">
-<td>user5</td>
-<td>54.163.52.182</td>
-<td><a href='http://54.163.52.182:8080' target='_blank'>terminal</a></td>
-<td><a href='http://54.163.52.182' target='_blank'>download files</a></td>
-</tr>
-<tr class="even">
-<td>user6</td>
-<td>3.91.100.181</td>
-<td><a href='http://3.91.100.181:8080' target='_blank'>terminal</a></td>
-<td><a href='http://3.91.100.181' target='_blank'>download files</a></td>
+<td>3.80.139.19</td>
+<td><a href='http://3.80.139.19:8080' target='_blank'>terminal</a></td>
+<td><a href='http://3.80.139.19' target='_blank'>download files</a></td>
 </tr>
 </tbody>
-
 </table>
 
 ****

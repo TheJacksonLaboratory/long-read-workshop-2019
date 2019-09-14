@@ -19,15 +19,46 @@ A remote computer (instance) on Amazon Web Services has been set up for use in t
 $(document).ready( function () {
     $('#example').DataTable();
 } );
-$(function(){
-    $("#includedContent").load("../users/pacbio/pacbio-users.html"); 
-});
 
 </script>
 ****
 
-<div id="includedContent"></div>
-
+<table id="example" class="display" style="width:100%" cellpadding="3px">
+<thead>
+<tr class="header">
+<th>Username</th>
+<th>IP</th>
+<th>Terminal</th>
+<th>Download Files</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>user1</td>
+<td>3.89.37.100</td>
+<td><a href='http://3.89.37.100:8080' target='_blank'>terminal</a></td>
+<td><a href='http://3.89.37.100' target='_blank'>download files</a></td>
+</tr>
+<tr class="even">
+<td>user2</td>
+<td>18.206.190.222</td>
+<td><a href='http://18.206.190.222:8080' target='_blank'>terminal</a></td>
+<td><a href='http://18.206.190.222' target='_blank'>download files</a></td>
+</tr>
+<tr class="odd">
+<td>user3</td>
+<td>54.237.244.151</td>
+<td><a href='http://54.237.244.151:8080' target='_blank'>terminal</a></td>
+<td><a href='http://54.237.244.151' target='_blank'>download files</a></td>
+</tr>
+<tr class="odd">
+<td>user5</td>
+<td>34.207.105.251</td>
+<td><a href='http://34.207.105.251:8080' target='_blank'>terminal</a></td>
+<td><a href='http://34.207.105.251' target='_blank'>download files</a></td>
+</tr>
+</tbody>
+</table>
 
 
 **Other ways to SSH into the instances**

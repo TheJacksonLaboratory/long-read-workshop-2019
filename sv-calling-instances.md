@@ -22,6 +22,9 @@ $(document).ready( function () {
 } );
 
 </script>
+
+****
+
 <table id="example" class="display" style="width:100%" cellpadding="3px">
 <thead>
 <tr class="header">
@@ -73,9 +76,9 @@ $(document).ready( function () {
 </table>
 
 ****
+****
 
-
-*Other ways to SSH into the instances*
+**Other ways to SSH into the instances**
 
 1. Open the terminal and type the following command substituting 'ip_address' for the IP address that was assigned to you above.
 

@@ -14,12 +14,7 @@ title: Oxford Nanopore Workshop
 
 If the link opens in a new tab, right-click on the link and click "save as".
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTy6L0mbRe_8SYdzypAzlxJgSR2hDiWKUBIET00UrXj1rvPs3HDCnQdsmSfGXr3V8CywLwmRP6geM5F/pubhtml?gid=891834841&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
-
-<form>
-    <input type="text" id="search">
-</form>
 
 Username              |  Hostname
 ----------------------|------------------------
@@ -117,6 +112,6 @@ user 1                |  train83.us.nanopore.me
 
 ### Workshop Data Analysis
 
-*Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/oxford-workshop-data-analysis.docx).*
+*Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/Data_Analysis_Guide_August_oxford.docx).*
 
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop/blob/gh-pages/users/oxford/oxford-workshop.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
+<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop-2019/blob/gh-pages/docs/Data_Analysis_Guide_August_oxford.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>

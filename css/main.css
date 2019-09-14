@@ -557,3 +557,10 @@ table tr td :last-child {
 table.dataTable tbody th, table.dataTable tbody td {
     padding: 4px 3px; 
 }
+
+#example th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #4c74af;
+    color: white;
+}

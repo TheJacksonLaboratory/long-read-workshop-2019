@@ -1,8 +1,7 @@
-Username   |  IP              |  Terminal                                                                       |  RStudio                                                           |  Download Files
------------|------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------
-testuser1  |  35.168.59.72    |  <a href='http://35.168.59.72:8888/terminals/1' target='_blank'>terminal</a>    |  <a href='http://35.168.59.72:8787' target='_blank'>rstudio</a>    |  <a href='http://35.168.59.72' target='_blank'>download files</a>
-testuser2  |  35.153.144.54   |  <a href='http://35.153.144.54:8888/terminals/1' target='_blank'>terminal</a>   |  <a href='http://35.153.144.54:8787' target='_blank'>rstudio</a>   |  <a href='http://35.153.144.54' target='_blank'>download files</a>
-testuser3  |  18.232.59.255   |  <a href='http://18.232.59.255:8888/terminals/1' target='_blank'>terminal</a>   |  <a href='http://18.232.59.255:8787' target='_blank'>rstudio</a>   |  <a href='http://18.232.59.255' target='_blank'>download files</a>
-testuser4  |  34.204.180.212  |  <a href='http://34.204.180.212:8888/terminals/1' target='_blank'>terminal</a>  |  <a href='http://34.204.180.212:8787' target='_blank'>rstudio</a>  |  <a href='http://34.204.180.212' target='_blank'>download files</a>
-testuser5  |  34.204.167.103  |  <a href='http://34.204.167.103:8888/terminals/1' target='_blank'>terminal</a>  |  <a href='http://34.204.167.103:8787' target='_blank'>rstudio</a>  |  <a href='http://34.204.167.103' target='_blank'>download files</a>
-testuser6  |  34.204.203.146  |  <a href='http://34.204.203.146:8888/terminals/1' target='_blank'>terminal</a>  |  <a href='http://34.204.203.146:8787' target='_blank'>rstudio</a>  |  <a href='http://34.204.203.146' target='_blank'>download files</a>
+Username    |  IP              |  Terminal                                                           |  Download Files
+------------|------------------|---------------------------------------------------------------------|--------------------------------------------------------------------
+user1       |  3.89.37.100     |  <a href='http://3.89.37.100:8080' target='_blank'>terminal</a>     |  <a href='http://3.89.37.100' target='_blank'>download files</a>
+user2       |  18.206.190.222  |  <a href='http://18.206.190.222:8080' target='_blank'>terminal</a>  |  <a href='http://18.206.190.222' target='_blank'>download files</a>
+user3       |  54.237.244.151  |  <a href='http://54.237.244.151:8080' target='_blank'>terminal</a>  |  <a href='http://54.237.244.151' target='_blank'>download files</a>
+user4       |  3.94.126.88     |  <a href='http://3.94.126.88:8080' target='_blank'>terminal</a>     |  <a href='http://3.94.126.88' target='_blank'>download files</a>
+user5       |  34.207.105.251  |  <a href='http://34.207.105.251:8080' target='_blank'>terminal</a>  |  <a href='http://34.207.105.251' target='_blank'>download files</a>

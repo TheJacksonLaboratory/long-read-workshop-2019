@@ -7,27 +7,68 @@ title: PacBio Sequencing Workshop
 
 A remote computer (instance) on Amazon Web Services has been set up for use in training for each user. All instances are identical with the same working environment. You should be able to connect from PC, Mac or Linux. Please see below for the instructions.
 
-
-
-
-
-
 ### User Instances
-    
+ * Username: ubuntu-user
+ * Password: Lrs-2019
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+<script>
+$(document).ready( function () {
+    $('#example').DataTable();
+} );
+</script>
+
+****
+
+<table id="example" class="display" style="width:100%" cellpadding="3px">
+<thead>
+<tr class="header">
+<th>Username</th>
+<th>IP</th>
+<th>Terminal</th>
+<th>Download Files</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>user1</td>
+<td>3.89.37.100</td>
+<td><a href='http://3.89.37.100:8080' target='_blank'>terminal</a></td>
+<td><a href='http://3.89.37.100' target='_blank'>download files</a></td>
+</tr>
+<tr class="even">
+<td>user2</td>
+<td>18.206.190.222</td>
+<td><a href='http://18.206.190.222:8080' target='_blank'>terminal</a></td>
+<td><a href='http://18.206.190.222' target='_blank'>download files</a></td>
+</tr>
+<tr class="odd">
+<td>user3</td>
+<td>54.237.244.151</td>
+<td><a href='http://54.237.244.151:8080' target='_blank'>terminal</a></td>
+<td><a href='http://54.237.244.151' target='_blank'>download files</a></td>
+</tr>
+<tr class="even">
+<td>user4</td>
+<td>3.94.126.88</td>
+<td><a href='http://3.94.126.88:8080' target='_blank'>terminal</a></td>
+<td><a href='http://3.94.126.88' target='_blank'>download files</a></td>
+</tr>
+<tr class="odd">
+<td>user5</td>
+<td>34.207.105.251</td>
+<td><a href='http://34.207.105.251:8080' target='_blank'>terminal</a></td>
+<td><a href='http://34.207.105.251' target='_blank'>download files</a></td>
+</tr>
+</tbody>
+</table>
 
 
-Username    |  IP              |  Terminal                                                           |  Download Files
-------------|------------------|---------------------------------------------------------------------|--------------------------------------------------------------------
-user1       |  3.89.37.100     |  <a href='http://3.89.37.100:8080' target='_blank'>terminal</a>     |  <a href='http://3.89.37.100' target='_blank'>download files</a>
-user2       |  18.206.190.222  |  <a href='http://18.206.190.222:8080' target='_blank'>terminal</a>  |  <a href='http://18.206.190.222' target='_blank'>download files</a>
-user3       |  54.237.244.151  |  <a href='http://54.237.244.151:8080' target='_blank'>terminal</a>  |  <a href='http://54.237.244.151' target='_blank'>download files</a>
-user4       |  3.94.126.88     |  <a href='http://3.94.126.88:8080' target='_blank'>terminal</a>     |  <a href='http://3.94.126.88' target='_blank'>download files</a>
-user5       |  34.207.105.251  |  <a href='http://34.207.105.251:8080' target='_blank'>terminal</a>  |  <a href='http://34.207.105.251' target='_blank'>download files</a>
 
-
-
-
-** Other ways to SSH into the instances **
+**Other ways to SSH into the instances**
 
 1. Open the terminal and type the following command substituting 'ip_address' for the IP address that was assigned to you above.
 

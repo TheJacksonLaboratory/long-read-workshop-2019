@@ -33,7 +33,7 @@ navbar-links:
    - Oxford Nanopore: "oxford-instances"
    - Nanopolish: "nanopolish-instances"
    - SV Calling: "sv-calling-instances"
-   - Bionano Access: "http://ec2-52-73-205-115.compute-1.amazonaws.com:8080/gp/"
+   - Bionano Access: "bionano-access-instances"
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.

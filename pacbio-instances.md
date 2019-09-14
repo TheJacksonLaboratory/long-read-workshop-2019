@@ -20,7 +20,7 @@ $(document).ready( function () {
     $('#example').DataTable();
 } );
 $(function(){
-    $("#includedContent").load("/users/pacbio/pacbio-users.html"); 
+    $("#includedContent").load("users/pacbio/pacbio-users.html"); 
 });
 
 </script>

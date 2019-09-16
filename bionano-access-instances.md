@@ -5,7 +5,9 @@ title: Bionano Access Workshop
 
 ### Bionano Access Instance Information
 
-A remote computer (instance) on Amazon Web Services has been set up for use in training. Please search for your name in the below table to get the username and password to login to the instance. 
+A remote computer (instance) on Amazon Web Services has been set up for use in training. 
+
+**Please search for your name in the below table to get the login information to your assigned instance.** 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>

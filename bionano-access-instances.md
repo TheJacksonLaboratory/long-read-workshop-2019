@@ -51,23 +51,10 @@ $(document).ready( function () {
 </table>
 
 ****
-****
-
-**Other ways to SSH into the instances**
-
-1. Open the terminal and type the following command substituting 'ip_address' for the IP address that was assigned to you above.
-
-        $ ssh ubuntu-user@ip_address
-        
-        Username: ubuntu-user
-        Password: Lrs-2019
-
-****
 
 ### Workshop Data Analysis
 
-*Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/Jackson_lab_workshopSV_FS.docx).*
+*Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/bionano-handout.pdf).*
 
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop-2019/blob/gh-pages/docs/Jackson_lab_workshopSV_FS.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
-
+<embed src="https://thejacksonlaboratory.github.io/long-read-workshop-2019/docs/bionano-handout.pdf" width="100%" height="700px" frameborder='0'/>
 

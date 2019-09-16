@@ -74,8 +74,8 @@ $(document).ready( function () {
 
 ### Workshop Data Analysis
 
-*Please scroll down the below document. If the document does not load, you can [download it here](https://s3.amazonaws.com/gt-workshop/jackson-pacbio-workshop.docx).*
+*Please scroll down the below document. If the document does not load, you can [download it here](https://gt-workshop.s3.amazonaws.com/JAX_Workshop_Guide_FINAL_LEGAL_APPROVED.pdf).*
 
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/TheJacksonLaboratory/long-read-workshop/raw/gh-pages/users/pacbio/jackson-pacbio-workshop.docx?raw=true&embedded=true" width='100%' height='700px' frameborder='0'></iframe>
 
+<embed src="https://thejacksonlaboratory.github.io/long-read-workshop-2019/docs/JAX_Workshop_Guide_FINAL_LEGAL_APPROVED.pdf" width="100%" height="700px" frameborder='0'/>
 

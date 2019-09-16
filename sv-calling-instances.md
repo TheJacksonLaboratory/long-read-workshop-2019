@@ -61,7 +61,7 @@ $(document).ready( function () {
         Username: ubuntu-user
         Password: Lrs-2019
 
-2. You can also access a terminal in the Jupterlab framework. Type the 'ip_address' followed by port 8889. For example: 3.80.139.19:8889. 
+2. You can also access a terminal in the Jupterlab framework. Type the 'ip_address' followed by port 8889. For example: 'ip_address':8889. 
 
 ****
 

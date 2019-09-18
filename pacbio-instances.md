@@ -65,10 +65,10 @@ $(document).ready( function () {
 
 1. Open the terminal and type the following command substituting 'ip_address' for the IP address that was assigned to you above.
 
-        $ ssh ubuntu@ip_address
+        $ ssh ubuntu-user@ip_address
         
-        Username: ubuntu
-        Password: jgm2018
+        Username: ubuntu-user
+        Password: Lrs-2019
 
 ****
 

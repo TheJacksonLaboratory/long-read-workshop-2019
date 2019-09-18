@@ -6,7 +6,7 @@ title: Oxford Nanopore Workshop
 
 ### User Instances
 
-<a href="https://s3.amazonaws.com/gt-workshop/mac_key_jackson.txt" download="mac_key_jackson.txt">Download mac_key_jackson.txt</a>
+<a href="https://a0d9112538298ada3fb0d232b173a274.s3.amazonaws.com/bionano-handout.pdf" download="mac_key_jackson.txt">Download mac_key_jackson.txt</a>
 <br />
 <a href="https://s3.amazonaws.com/gt-workshop/pc_key_jackson.ppk" download>Download pc_key_jackson.ppk</a>
 <br />

@@ -8,96 +8,641 @@ title: Oxford Nanopore Workshop
 
 <a href="https://a0d9112538298ada3fb0d232b173a274.s3.amazonaws.com/bionano-handout.pdf" download="mac_key_jackson.txt">Download mac_key_jackson.txt</a>
 <br />
-<a href="https://s3.amazonaws.com/gt-workshop/pc_key_jackson.ppk" download>Download pc_key_jackson.ppk</a>
+<a href="https://a0d9112538298ada3fb0d232b173a274.s3.amazonaws.com/pc_key_jackson.ppk" download>Download pc_key_jackson.ppk</a>
 <br />
 <a href="https://dl.bitvise.com/BvSshClient-Inst.exe" download>Download Bitvise SSH Client</a> (Windows users)
 
 If the link opens in a new tab, right-click on the link and click "save as".
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 
+<script>
+$(document).ready( function () {
+    $('#example').DataTable();
+} );
 
-Username              |  Hostname
-----------------------|------------------------
-Aamir Zuberi          |  train04.us.nanopore.me
-Amit Gujar            |  train05.us.nanopore.me
-Anil Kesarwani        |  train06.us.nanopore.me
-Ankit Malhotra        |  train07.us.nanopore.me
-Anne Deslattes Mays   |  train08.us.nanopore.me
-Anuj Srivastava       |  train09.us.nanopore.me
-AYSE OZEL             |  train10.us.nanopore.me
-Bo Zhang              |  train11.us.nanopore.me
-Bony De Kumar         |  train12.us.nanopore.me
-Byoungkoo Lee         |  train13.us.nanopore.me
-Candice Byers         |  train14.us.nanopore.me
-Chen Shen             |  train15.us.nanopore.me
-Chong Chu             |  train16.us.nanopore.me
-Chris Seidel          |  train17.us.nanopore.me
-Christian Meekins     |  train18.us.nanopore.me
-Christine Beck        |  train19.us.nanopore.me
-Daniel Campo          |  train20.us.nanopore.me
-Denisse Tafur         |  train21.us.nanopore.me
-Diogo Troggian-Veiga  |  train22.us.nanopore.me
-Elaheh Ahmadzadeh     |  train23.us.nanopore.me
-Eric Wong             |  train24.us.nanopore.me
-Ernst Reichenberger   |  train25.us.nanopore.me
-Eunhee Yi             |  train26.us.nanopore.me
-Eva Gega              |  train27.us.nanopore.me
-Feng Chen             |  train28.us.nanopore.me
-Feng Yue              |  train29.us.nanopore.me
-Guru Ananda           |  train30.us.nanopore.me
-Harshpreet Chandok    |  train31.us.nanopore.me
-Hongbo Yang           |  train32.us.nanopore.me
-Hoon Kim              |  train33.us.nanopore.me
-Jan Chao              |  train34.us.nanopore.me
-Jeremiah Miller       |  train35.us.nanopore.me
-Jihe Liu              |  train36.us.nanopore.me
-Julia Oh              |  train37.us.nanopore.me
-Jun Zhou              |  train38.us.nanopore.me
-Kevin Johnson         |  train39.us.nanopore.me
-KUN ZHU               |  train40.us.nanopore.me
-Lili Sun              |  train41.us.nanopore.me
-Lucas Lochovsky       |  train42.us.nanopore.me
-Marina Yurieva        |  train43.us.nanopore.me
-Maximiliano Presa     |  train44.us.nanopore.me
-Mei-Ju Chen           |  train45.us.nanopore.me
-Meizhen Zheng         |  train46.us.nanopore.me
-Melanie Herscovitch   |  train47.us.nanopore.me
-Nancy Groot           |  train48.us.nanopore.me
-Nathan Roach          |  train49.us.nanopore.me
-Neil Kindlon          |  train50.us.nanopore.me
-Olajide Abiola        |  train51.us.nanopore.me
-Parithi Balachandran  |  train52.us.nanopore.me
-Peng Liu              |  train53.us.nanopore.me
-Peter Castaldi        |  train54.us.nanopore.me
-Qianchang Wang        |  train55.us.nanopore.me
-QIhui Zhu             |  train56.us.nanopore.me
-Raman Nelakanti       |  train57.us.nanopore.me
-RAVI PANDEY           |  train58.us.nanopore.me
-Rupesh Kesharwani     |  train59.us.nanopore.me
-Ryan Lynch            |  train60.us.nanopore.me
-Samir Amin            |  train61.us.nanopore.me
-Seda Arat             |  train62.us.nanopore.me
-Shaopeng Liu          |  train63.us.nanopore.me
-Shengdong Ke          |  train64.us.nanopore.me
-Silvia Liu            |  train65.us.nanopore.me
-Su Wang               |  train66.us.nanopore.me
-SungHee Park          |  train67.us.nanopore.me
-Tanisha Jackson       |  train68.us.nanopore.me
-Tanmoy Bhattacharyya  |  train69.us.nanopore.me
-Towfique Raj          |  train70.us.nanopore.me
-Uma Arora             |  train71.us.nanopore.me
-Xiaoqing Han          |  train72.us.nanopore.me
-Y. Ada Zhan           |  train73.us.nanopore.me
-Ya-Ting Chang         |  train74.us.nanopore.me
-Yanfen Zhu            |  train75.us.nanopore.me
-Yang Chen             |  train76.us.nanopore.me
-Yang Wang             |  train77.us.nanopore.me
-Yun-Suhk Suh          |  train78.us.nanopore.me
-Zhihui Li             |  train79.us.nanopore.me
-Zhonghui Tang         |  train80.us.nanopore.me
-Zhongyuan Tian        |  train81.us.nanopore.me
-Zi-Ming Zhao          |  train82.us.nanopore.me
-user 1                |  train83.us.nanopore.me
+</script>
+
+<table id="example" class="display" style="width:100%" cellpadding="3px">
+<thead>
+<tr class="header">
+<th>FullName</th>
+<th>IP_address</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Amin, Samir</td>
+<td>54.91.171.12</td>
+</tr>
+<tr class="even">
+<td>Bergeron, Daniel</td>
+<td>3.80.139.19</td>
+</tr>
+<tr class="odd">
+<td>Danis, Daniel</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Bakeman, Janet</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Englander, Ryan</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Blanco-Berdugo, Laura</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Gega, Eva</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Gordin, Danya</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Harrison, David</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Holinka-Patterson, Lauren</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hsiao, Meng-Chang</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Johnson, Kevin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Jun, Yukyung</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Kang, Won Yeong</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Kesharwani, Rupesh</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Kocakavuk, Emre</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Lau, Ching</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Lee, Byoungkoo</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>del Carmen, Silvina</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Liu, Yang</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Maurya, Rahul</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Mukashyaka, Patience</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Park, SungHee</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Peer, Asaf</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ravanmehr, Vida</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rosikiewicz, Wojciech</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Saul, Michael</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ghospurkar, Padmaja</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Tian, Simon Zhongyuan</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tjong, Harianto</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Urbanski, Laura</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Uyar, Asli</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Varn, Frederick</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Harry, Shamir</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Yang, Xiaofei</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Yi, Eunhee</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Zhang, Aaron</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Zhao, Ziming</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Zhu, Qihui</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Alexander, Marcus</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Alzabiby, Anas</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Appel, Maryke</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Aruck, Ryan</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Bochkov, Ivan</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Boles, Chris</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Bowman, Larry</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ke, Shengdong</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Brownmiller, Tayvia</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Chen, Feng</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Chen, Noel</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Chung, Hyunjung</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Lau, Alyssa</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Crowe, William</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Dollive, Serena</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fang, Yi</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Foertter, Fernanda</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Galecke, Jeff</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Li, Meihong</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Li, Sheng</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Ghodssi, Azita</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Groot, Nancy</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Guo, Li-Tao</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hall, Kate</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>HARI, BALAJI</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Maser, Rick</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Hassan, Huzaifa</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Mil-Homens, Adam</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Munger, Heidi</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Huang, Amy</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ngan, chew yee</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Huang, Yiwei</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Humphrey, Jack</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Iyer, Shruti</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Izumi, Yuki</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Jeong, Sol</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Jiang, Lin</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Klunk, Jennifer</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Perry, Greg</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Krebs, Christopher</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Kwon, Jeong-Ah</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Lee, Dong-hun</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Lee, Yan-Jiun</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>LEE, YONGJIN</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Lin, Jyun-Hong</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ma, Jingqun</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>O'Donnell, Vivian</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Peng, Joyce</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Penkler, David</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Penkler, Jo-Anne</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Perera, Anoja</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Perera, Neranjan</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Pirani, Ali</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Pirooznia, Mehdi</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Raj, Prithvi</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rajan Babu, Indhu Shree</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rajarajacholan, Uma</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Raman, Ayush</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reid, Noah</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sun, Fanyue</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rosas, Maria</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rosenfeld, Jeffrey</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rotsinger, Joseph</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rupani, Amit</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Saint-John, Brandon</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sala-Torra, Olga</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Schmidt, Marcel</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sharma, Samrudhi</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Song, Chi</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sun, Luo</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tan, Kar-Tong</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Wong, Chee-Hong</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Truong, Tiffany</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>turner, terrence</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>VACEK, GEORGE</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Velasco, Vera</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Vialle, Ricardo</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Walsh, John</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Wu, Weisheng</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Zhou, Jun</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Zinder, Oraya</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>BOYA, RAVI</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Brown, Rebecca</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Chen, Huei Mei</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Gainetdinov, Ildar</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Gasser, Mark</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Henck, Steven</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Hisey, Julia</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Johnson, Ben</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>KOKSALAN, O. KAYA</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>lee, kwok</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Low, Hwee Meng</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Nogueira, Lilian</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Phelps, Michael</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Resendes, Rachel</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rhodes, Mary</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Rossato, Marzia</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Ryke, Erica</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Slevin, Michael</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Snyder, Daniel</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sookiasian, Danielle</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sun, Yu</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Yurieva, Marina</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>participant1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>participant2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>participant3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>participant4</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>participant5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>participant6</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>participant7</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>participant8</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>participant9</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>participant10</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 ****

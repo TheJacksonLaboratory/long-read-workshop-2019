@@ -1100,6 +1100,111 @@ $(document).ready( function () {
 <td><a href='http://34.207.112.35' target='_blank'>Download Files</a></td>
 <td><a href='http://34.207.112.35:8787' target='_blank'>RStudio</a></td>
 </tr>
+<tr class="odd">
+<td>participant11</td>
+<td>54.208.245.199</td>
+<td><a href='http://54.208.245.199:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://54.208.245.199' target='_blank'>Download Files</a></td>
+<td><a href='http://54.208.245.199:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant12</td>
+<td>3.84.127.114</td>
+<td><a href='http://3.84.127.114:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://3.84.127.114' target='_blank'>Download Files</a></td>
+<td><a href='http://3.84.127.114:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant13</td>
+<td>54.197.34.253</td>
+<td><a href='http://54.197.34.253:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://54.197.34.253' target='_blank'>Download Files</a></td>
+<td><a href='http://54.197.34.253:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant14</td>
+<td>54.210.243.185</td>
+<td><a href='http://54.210.243.185:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://54.210.243.185' target='_blank'>Download Files</a></td>
+<td><a href='http://54.210.243.185:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant15</td>
+<td>54.236.121.38</td>
+<td><a href='http://54.236.121.38:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://54.236.121.38' target='_blank'>Download Files</a></td>
+<td><a href='http://54.236.121.38:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant16</td>
+<td>3.94.212.225</td>
+<td><a href='http://3.94.212.225:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://3.94.212.225' target='_blank'>Download Files</a></td>
+<td><a href='http://3.94.212.225:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant17</td>
+<td>18.232.121.3</td>
+<td><a href='http://18.232.121.3:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://18.232.121.3' target='_blank'>Download Files</a></td>
+<td><a href='http://18.232.121.3:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant18</td>
+<td>52.90.196.143</td>
+<td><a href='http://52.90.196.143:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://52.90.196.143' target='_blank'>Download Files</a></td>
+<td><a href='http://52.90.196.143:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant19</td>
+<td>35.175.210.224</td>
+<td><a href='http://35.175.210.224:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://35.175.210.224' target='_blank'>Download Files</a></td>
+<td><a href='http://35.175.210.224:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant20</td>
+<td>18.232.106.70</td>
+<td><a href='http://18.232.106.70:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://18.232.106.70' target='_blank'>Download Files</a></td>
+<td><a href='http://18.232.106.70:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant21</td>
+<td>3.85.113.113</td>
+<td><a href='http://3.85.113.113:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://3.85.113.113' target='_blank'>Download Files</a></td>
+<td><a href='http://3.85.113.113:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant22</td>
+<td>54.159.111.177</td>
+<td><a href='http://54.159.111.177:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://54.159.111.177' target='_blank'>Download Files</a></td>
+<td><a href='http://54.159.111.177:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant23</td>
+<td>3.94.117.63</td>
+<td><a href='http://3.94.117.63:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://3.94.117.63' target='_blank'>Download Files</a></td>
+<td><a href='http://3.94.117.63:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="even">
+<td>participant24</td>
+<td>3.88.239.212</td>
+<td><a href='http://3.88.239.212:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://3.88.239.212' target='_blank'>Download Files</a></td>
+<td><a href='http://3.88.239.212:8787' target='_blank'>RStudio</a></td>
+</tr>
+<tr class="odd">
+<td>participant25</td>
+<td>54.210.139.88</td>
+<td><a href='http://54.210.139.88:8080' target='_blank'>Terminal</a></td>
+<td><a href='http://54.210.139.88' target='_blank'>Download Files</a></td>
+<td><a href='http://54.210.139.88:8787' target='_blank'>RStudio</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -1110,11 +1215,11 @@ $(document).ready( function () {
 1. Open the terminal and type the following command substituting 'ip_address' for the IP address that was assigned to you above.
 
         $ ssh ubuntu-user@ip_address
-        
+
         Username: ubuntu-user
         Password: Lrs-2019
 
-2. You can also access a terminal in the Jupterlab framework. Type the 'ip_address' followed by port 8889. For example: 'ip_address':8889. 
+2. You can also access a terminal in the Jupterlab framework. Type the 'ip_address' followed by port 8889. For example: 'ip_address':8889.
 
 ****
 

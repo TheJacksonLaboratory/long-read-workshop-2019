@@ -20,12 +20,23 @@ If the link opens in a new tab, right-click on the link and click "save as".
 
 <script>
 $(document).ready( function () {
-    $('#example').DataTable();
+    $('#example').DataTable(
+    {
+  columnDefs: [
+    {
+        targets: [1,2]
+        className: 'dt-body-center'
+    }
+  ]
+}
+    
+    );
+    
 } );
 
 </script>
 
-<table id="example" class="display" style="width:100%" cellpadding="3px">
+<table id="example" class="display" style="width:50%" cellpadding="1px">
 <thead>
 <tr class="header">
 <th>FullName</th>
